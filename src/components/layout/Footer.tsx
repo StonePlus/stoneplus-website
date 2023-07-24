@@ -1,5 +1,5 @@
 import Image from "next/image";
-import StoneLogo from "@svg/Logo.svg";
+import StoneLogo from "@svg/logo.svg";
 
 export const Footer = () => {
   return (
