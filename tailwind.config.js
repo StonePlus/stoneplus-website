@@ -1,18 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        white: "#ffffff",
+        gunmetal: {
+          50: "#F7F8F8",
+          200: "#DFE0E0",
+          300: "#BFC0C0",
+          400: "#9598A0",
+          600: "#454B58",
+          700: "#2E3543",
+          800: "#242A36",
+          950: "#121C22",
+        },
       },
+      backgroundImage: {
+        'hero': "url('../../public/img/bg-hero.jpg')",
+      }
     },
   },
   plugins: [require("daisyui")],
-}
+};

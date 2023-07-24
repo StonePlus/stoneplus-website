@@ -1,6 +1,11 @@
 import './globals.css'
+
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
+
+import { Navbar } from '@/components/layout/Navbar'
+import { WppToast } from '@/components/ui/WppToast'
+import { Footer } from '@/components/layout/Footer'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -16,7 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={openSans.className}>{children}</body>
+      <body className={openSans.className}>
+        <Navbar />
+        {children}
+        <WppToast />
+        <Footer />
+      </body>
     </html>
   )
 }
