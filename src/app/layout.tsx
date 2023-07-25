@@ -1,26 +1,27 @@
-import './globals.css'
+import "./globals.css";
 
-import type { Metadata } from 'next'
-import { Open_Sans } from 'next/font/google'
+import type { Metadata } from "next";
+import { Open_Sans } from "next/font/google";
 
-import { Navbar } from '@/components/layout/Navbar'
-import { WppToast } from '@/components/ui/WppToast'
-import { Footer } from '@/components/layout/Footer'
+import { Navbar } from "@/components/layout/Navbar";
+import { WppToast } from "@/components/ui/WppToast";
+import { Footer } from "@/components/layout/Footer";
 
-const openSans = Open_Sans({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'StonePlus - Concrete Design',
-  description: 'Indústria especializada em Cimentícios, Bordas de Piscina, Revestimentos e Pedras Naturais.',
-}
+  title: "StonePlus - Concrete Design",
+  description:
+    "Indústria especializada em Cimentícios, Bordas de Piscina, Revestimentos e Pedras Naturais.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
+    <html className="scroll-smooth" lang="pt-br">
       <body className={openSans.className}>
         <Navbar />
         {children}
@@ -28,5 +29,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  )
+  );
 }

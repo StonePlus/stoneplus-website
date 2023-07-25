@@ -18,6 +18,11 @@ module.exports = {
           800: "#242A36",
           950: "#121C22",
         },
+        coral: {
+          400: "#E66445",
+          500: "#E55937",
+          600: "#E2451E",
+        },
       },
       backgroundImage: {
         'hero': "url('../../public/img/bg-hero.jpg')",

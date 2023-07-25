@@ -1,10 +1,27 @@
+"use client";
+
 import Image from "next/image";
+import { useScrollPosition } from "@/hooks/useScrollPosition";
+
 import StoneLogo from "@svg/logo.svg";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import {
+  GlobeAltIcon,
+  Bars3BottomRightIcon,
+} from "@heroicons/react/24/outline";
 
 export const Navbar = () => {
+  function classNames(...classes: any) {
+    return classes.filter(Boolean).join(" ");
+  }
+  const scrollPosition = useScrollPosition();
+
   return (
-    <div className="navbar bg-transparent w-full 2xl:px-12 fixed z-50">
+    <div
+      className={classNames(
+        scrollPosition > 0 ? "bg-gunmetal-950" : "bg-transparent",
+        "navbar w-full 2xl:px-12 fixed z-50 hover:bg-gunmetal-950"
+      )}
+    >
       <div className="navbar-start">
         <a className="btn btn-ghost hover:bg-transparent normal-case text-2xl text-gunmetal-50 hover:text-white font-bold tracking-tight">
           <Image alt="StonePlus Logo" src={StoneLogo} width={24} height={24} />
@@ -14,12 +31,12 @@ export const Navbar = () => {
 
       {/* Desktop */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-2 text-base text-gunmetal-50 hover:text-white font-bold uppercase">
-          <li>
+        <ul className="inline-flex flex-row px-1 gap-2 text-base text-gunmetal-50 font-bold uppercase">
+          <li className="btn btn-ghost hover:bg-transparent rounded-btn text-gunmetal-50 hover:text-coral-500">
             <a>História</a>
           </li>
 
-          <li>
+          <li className="btn btn-ghost hover:bg-transparent rounded-btn text-gunmetal-50 hover:text-coral-500">
             <a>Catálago</a>
           </li>
         </ul>
@@ -29,9 +46,9 @@ export const Navbar = () => {
         <div className="dropdown dropdown-end">
           <label
             tabIndex={0}
-            className="btn btn-ghost rounded-btn text-gunmetal-50"
+            className="btn btn-ghost hover:bg-transparent text-gunmetal-50 hover:text-coral-500"
           >
-            <GlobeAltIcon className="h-6 w-6 text-gunmetal-50" />
+            <GlobeAltIcon className="h-6 w-6 text-inherit hover:text-inherit" />
             PT
           </label>
           <ul
@@ -48,22 +65,12 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile */}
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+        <div className="dropdown dropdown-end">
+          <label
+            tabIndex={0}
+            className="btn btn-ghost hover:bg-transparent lg:hidden text-gunmetal-50 hover:text-coral-500"
+          >
+            <Bars3BottomRightIcon className="h-6 w-6 text-inherit hover:text-inherit stroke-2 stroke-gunmetal-50 hover:stroke-coral-500" />
           </label>
 
           <ul

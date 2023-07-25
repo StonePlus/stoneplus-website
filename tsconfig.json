@@ -22,7 +22,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@img/*": ["./public/img/*"],
-      "@svg/*": ["./public/img/svg/*"]
+      "@svg/*": ["./public/img/svg/*"],
+      "@hooks/*": ["./src/hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
