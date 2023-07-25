@@ -32,11 +32,11 @@ export const Navbar = () => {
       {/* Desktop */}
       <div className="navbar-center hidden lg:flex">
         <ul className="inline-flex flex-row px-1 gap-2 text-base text-gunmetal-50 font-bold uppercase">
-          <li className="btn btn-ghost hover:bg-transparent rounded-btn text-gunmetal-50 hover:text-coral-500">
+          <li className="btn btn-ghost hover:bg-transparent rounded-btn text-gunmetal-50 hover:text-coral-500 font-bold">
             <a>História</a>
           </li>
 
-          <li className="btn btn-ghost hover:bg-transparent rounded-btn text-gunmetal-50 hover:text-coral-500">
+          <li className="btn btn-ghost hover:bg-transparent rounded-btn text-gunmetal-50 hover:text-coral-500 font-bold">
             <a>Catálago</a>
           </li>
         </ul>
@@ -46,7 +46,7 @@ export const Navbar = () => {
         <div className="dropdown dropdown-end">
           <label
             tabIndex={0}
-            className="btn btn-ghost hover:bg-transparent text-gunmetal-50 hover:text-coral-500"
+            className="btn btn-ghost hover:bg-transparent text-gunmetal-50 hover:text-coral-500 font-bold"
           >
             <GlobeAltIcon className="h-6 w-6 text-inherit hover:text-inherit" />
             PT
