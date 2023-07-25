@@ -1,22 +1,25 @@
 import Image from "next/image";
 import StoneLogo from "@svg/logo.svg";
+import StoneBrand from "@svg/logo-brand.svg";
+import {
+  ArrowTopRightOnSquareIcon,
+  DocumentArrowDownIcon,
+  BookOpenIcon,
+  MapIcon,
+  PhoneArrowUpRightIcon,
+} from "@heroicons/react/24/outline";
 
 export const Footer = () => {
   return (
     <>
-      <footer className="footer gap-x-10 p-10 bg-gunmetal-950 text-gunmetal-50">
-        <div className="place-items-start lg:justify-center w-full">
+      <footer className="footer gap-x-14 p-10 bg-gunmetal-950 text-gunmetal-50">
+        <div className="grid md:hidden lg:grid place-items-start min-w-[220px] lg:justify-center w-full">
           <span className="flex flex-row items-center mb-2 font-bold normal-case text-3xl">
             <Image
               alt="StonePlus Logo"
-              src={StoneLogo}
-              width={40}
+              src={StoneBrand}
               height={40}
             />
-            <div className="">
-              <p>StonePlus</p>
-              <p className="text-xs">Concrete Design</p>
-            </div>
           </span>
           <p className="font-light max-w-xs text-gunmetal-200">
             Somos uma empresa que se destaca no mercado pela elegância,
@@ -25,44 +28,63 @@ export const Footer = () => {
           </p>
         </div>
 
-        <div className="place-items-start lg:justify-center w-full">
-          <span className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800">
+        <div className="place-items-start lg:justify-center w-full whitespace-nowrap">
+          <span className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800 whitespace-nowrap">
             Mapa do site
           </span>
-          <a className="link link-hover">Quem somos</a>
-          <a className="link link-hover">Perguntas frequentes</a>
-          <a className="link link-hover">Catálogo de produtos</a>
-          <a className="link link-hover">Políticas de privacidade</a>
+          <a className="flex items-center gap-2 link link-hover whitespace-nowrap">
+            Quem somos
+            <ArrowTopRightOnSquareIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+          </a>
+          <a className="flex items-center gap-2 link link-hover whitespace-nowrap">
+            Perguntas frequentes
+            <ArrowTopRightOnSquareIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+          </a>
+          <a className="flex items-center gap-2 link link-hover whitespace-nowrap">
+            Catálogo de produtos
+            <DocumentArrowDownIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+          </a>
+          <a className="flex items-center gap-2 link link-hover whitespace-nowrap">
+            Políticas de privacidade
+            <BookOpenIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+          </a>
         </div>
 
-        <div className="place-items-start lg:justify-center w-full">
-          <span className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800">
+        <div className="place-items-start lg:justify-center w-full whitespace-nowrap">
+          <span className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800 whitespace-nowrap">
             Onde estamos
           </span>
-          <p className="font-light">
+          <p className="font-light whitespace-nowrap">
             Avenida Antônio Sales, 535 - Loja 03 <br />
             Joaquim Távora - Fortaleza - CE <br />
             60135-100
           </p>
-          <a className="link link-hover">Veja como chegar</a>
+          <a className="flex items-center gap-2 link link-hover whitespace-nowrap">
+            Veja como chegar
+            <MapIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+          </a>
         </div>
 
-        <div className="place-items-start lg:justify-center w-full">
-          <span className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800">
+        <div className="place-items-start lg:justify-center w-full whitespace-nowrap">
+          <span className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800 whitespace-nowrap">
             Atendimento
           </span>
-          <p className="font-light">
+          <p className="font-light whitespace-nowrap">
             (85) 3260-2501 <br />
             Horário de atendimento: <br />
             Segunda à sexta das 9h às 17h
           </p>
-          <a className="link link-hover">Entre em contato</a>
+          <a className="flex items-center gap-2 link link-hover whitespace-nowrap">
+            Entre em contato
+            <PhoneArrowUpRightIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+          </a>
         </div>
       </footer>
 
       <footer className="footer px-10 py-4 border-t border-gunmetal-800 bg-gunmetal-950 text-gunmetal-200">
         <div className="items-center grid-flow-col">
-          <p>&copy; 2023 StonePlus - Concrete Design</p>
+        <Image className="hidden md:grid lg:hidden" alt="StonePlus Logo" src={StoneLogo} width={20} height={20} />
+          <p className="whitespace-nowrap">&copy; 2023 StonePlus - Concrete Design</p>
         </div>
         <div className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
