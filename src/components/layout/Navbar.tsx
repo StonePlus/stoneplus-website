@@ -19,7 +19,7 @@ export const Navbar = () => {
     <div
       className={classNames(
         scrollPosition > 0 ? "bg-gunmetal-950" : "bg-transparent",
-        "navbar w-full 2xl:px-12 fixed z-50 hover:bg-gunmetal-950"
+        "navbar w-full px-6 xl:px-8 2xl:px-12 fixed z-50 hover:bg-gunmetal-950"
       )}
     >
       <div className="navbar-start">
