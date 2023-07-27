@@ -12,8 +12,8 @@ import {
 export const Footer = () => {
   return (
     <>
-      <footer className="footer gap-x-14 p-10 bg-gunmetal-950 text-gunmetal-50">
-        <div className="grid md:hidden lg:grid place-items-start min-w-[220px] lg:justify-center w-full">
+      <footer className="footer justify-between gap-x-10 xl:gap-x-14 py-10 px-10 xl:px-12 2xl:px-16 bg-gunmetal-950 text-gunmetal-50">
+        <div className="grid md:hidden lg:grid min-w-[220px] lg:justify-center w-full">
           <span className="flex flex-row items-center mb-2 font-bold normal-case text-3xl">
             <Image
               alt="StonePlus Logo"
@@ -21,7 +21,7 @@ export const Footer = () => {
               height={40}
             />
           </span>
-          <p className="font-light max-w-xs text-gunmetal-200">
+          <p className="font-light max-w-sm text-gunmetal-200">
             Somos uma empresa que se destaca no mercado pela elegância,
             durabilidade e funcionalidade. Buscamos sempre oferecer soluções
             personalizadas de acordo com as especificações dos nossos clientes.
@@ -81,10 +81,10 @@ export const Footer = () => {
         </div>
       </footer>
 
-      <footer className="footer px-10 py-4 border-t border-gunmetal-800 bg-gunmetal-950 text-gunmetal-200">
+      <footer className="footer pb-4 px-10 xl:px-12 2xl:px-16 bg-gunmetal-950 text-gunmetal-200">
         <div className="items-center grid-flow-col">
         <Image className="hidden md:grid lg:hidden" alt="StonePlus Logo" src={StoneLogo} width={20} height={20} />
-          <p className="whitespace-nowrap">&copy; 2023 StonePlus - Concrete Design</p>
+          <p>&copy; 2023 StonePlus - Concrete Design</p>
         </div>
         <div className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
