@@ -5,14 +5,12 @@ import QuoteSvg from "@svg/quote.svg";
 
 export const Mission = () => {
   return (
-    <div className="bg-coral-500">
-      <div className="flex flex-col gap-16 sm:gap-24 max-w-screen-xl mx-auto w-screen px-10 pt-16 pb-20">
-        <div className="">
-          <h2 className="flex flex-col gap-y-2 text-3xl sm:text-5xl font-bold text-white">
-            <span>Nossa missão?</span>
-            <span>Excelência para você!</span>
-          </h2>
-        </div>
+    <section className="bg-coral-500">
+      <div className="flex flex-col gap-16 sm:gap-24 max-w-screen-xl mx-auto w-screen px-10 xl:px-4 pt-16 pb-20">
+        <h2 className="flex flex-col gap-y-2 text-3xl sm:text-5xl font-bold text-white">
+          <span>Nossa missão?</span>
+          <span>Excelência para você!</span>
+        </h2>
 
         <div className="flex flex-row flex-wrap md:flex-nowrap gap-x-12 gap-y-10 w-full h-fit place-items-start">
           <div className="flex flex-row place-content-start basis-full md:basis-1/2 gap-x-3 md:gap-x-6">
@@ -35,14 +33,20 @@ export const Mission = () => {
                 Fornecer soluções inovadoras e sustentáveis.
               </p>
 
-              <Link href="/pt/nossa-historia" className="hidden md:inline-flex btn flex-nowrap truncate text-gunmetal-600 w-fit">
+              <Link
+                href="/pt/nossa-historia"
+                className="hidden md:inline-flex btn flex-nowrap truncate text-gunmetal-600 w-fit"
+              >
                 Conheça nossa história
                 <ArrowTopRightOnSquareIcon className="h-5 stroke-2 stroke-gunmetal-600" />
               </Link>
             </div>
           </div>
 
-          <Link href="/pt/nossa-historia" className="md:hidden btn flex-nowrap truncate text-gunmetal-600 w-fit">
+          <Link
+            href="/pt/nossa-historia"
+            className="md:hidden btn flex-nowrap truncate text-gunmetal-600 w-fit"
+          >
             Conheça nossa história
             <ArrowTopRightOnSquareIcon className="h-5 stroke-2 stroke-gunmetal-600" />
           </Link>
@@ -57,6 +61,6 @@ export const Mission = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
