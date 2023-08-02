@@ -13,7 +13,7 @@ import {
 export const Footer = () => {
   return (
     <footer>
-      <div className="footer justify-between gap-x-10 xl:gap-x-14 py-10 px-10 xl:px-12 2xl:px-16 bg-gunmetal-950 text-gunmetal-50">
+      <div className="footer justify-between gap-x-10 xl:gap-x-14 py-10 px-10 xl:px-12 2xl:px-16 bg-gunmetal-950 text-gunmetal-300">
         <section className="grid md:hidden lg:grid min-w-[220px] lg:justify-center w-full">
           <h4 className="flex flex-row items-center mb-2 font-bold normal-case text-3xl">
             <Image alt="StonePlus" src={StoneBrand} height={40} />
@@ -26,48 +26,48 @@ export const Footer = () => {
         </section>
 
         <section className="place-items-start lg:justify-center w-full whitespace-nowrap">
-          <h5 className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800 whitespace-nowrap">
+          <h5 className="w-full pb-2 mb-2 font-bold text-lg border-b text-gunmetal-50 border-gunmetal-800 whitespace-nowrap">
             Mapa do site
           </h5>
           <nav>
             <ul className="grid place-items-start gap-2">
               <li>
                 <Link
-                  className="flex items-center gap-2 link link-hover whitespace-nowrap underline-offset-2"
+                  className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
                   href="#"
                 >
                   Quem somos
-                  <ArrowTopRightOnSquareIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+                  <ArrowTopRightOnSquareIcon className="h-3 w-3 stroke-2 stroke-inherit" />
                 </Link>
               </li>
 
               <li>
                 <Link
-                  className="flex items-center gap-2 link link-hover whitespace-nowrap underline-offset-2"
+                  className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
                   href="#"
                 >
                   Perguntas frequentes
-                  <ArrowTopRightOnSquareIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+                  <ArrowTopRightOnSquareIcon className="h-3 w-3 stroke-2 stroke-inherit" />
                 </Link>
               </li>
 
               <li>
                 <Link
-                  className="flex items-center gap-2 link link-hover whitespace-nowrap underline-offset-2"
+                  className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
                   href="#"
                 >
                   Catálogo de produtos
-                  <DocumentArrowDownIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+                  <DocumentArrowDownIcon className="h-3 w-3 stroke-2 stroke-inherit" />
                 </Link>
               </li>
 
               <li>
                 <Link
-                  className="flex items-center gap-2 link link-hover whitespace-nowrap underline-offset-2"
+                  className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
                   href="#"
                 >
                   Políticas de privacidade
-                  <BookOpenIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+                  <BookOpenIcon className="h-3 w-3 stroke-2 stroke-inherit" />
                 </Link>
               </li>
             </ul>
@@ -75,7 +75,7 @@ export const Footer = () => {
         </section>
 
         <section className="place-items-start lg:justify-center w-full whitespace-nowrap">
-          <h5 className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800 whitespace-nowrap">
+          <h5 className="w-full pb-2 mb-2 font-bold text-lg text-gunmetal-50 border-b border-gunmetal-800 whitespace-nowrap">
             Onde estamos
           </h5>
           <address className="font-light whitespace-nowrap not-italic">
@@ -84,16 +84,16 @@ export const Footer = () => {
             60135-100
           </address>
           <Link
-            className="flex items-center gap-2 link link-hover whitespace-nowrap underline-offset-2"
+            className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
             href="#"
           >
             Veja como chegar
-            <MapIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+            <MapIcon className="h-3 w-3 stroke-2 stroke-inherit" />
           </Link>
         </section>
 
         <section className="place-items-start lg:justify-center w-full whitespace-nowrap">
-          <h5 className="w-full pb-4 mb-2 font-bold text-lg border-b border-gunmetal-800 whitespace-nowrap">
+          <h5 className="w-full pb-2 mb-2 font-bold text-lg text-gunmetal-50 border-b border-gunmetal-800 whitespace-nowrap">
             Atendimento
           </h5>
           <address className="font-light whitespace-nowrap not-italic">
@@ -102,11 +102,11 @@ export const Footer = () => {
             Segunda à sexta das 9h às 17h
           </address>
           <Link
-            className="flex items-center gap-2 link link-hover whitespace-nowrap underline-offset-2"
+            className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
             href="#"
           >
             Entre em contato
-            <PhoneArrowUpRightIcon className="h-3 w-3 stroke-2 stroke-gunmetal-50" />
+            <PhoneArrowUpRightIcon className="h-3 w-3 stroke-2 stroke-inherit" />
           </Link>
         </section>
       </div>
