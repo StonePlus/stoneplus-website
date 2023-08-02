@@ -29,16 +29,18 @@ export const Mission = () => {
               alt="Quote icon"
             />
             <div className="flex flex-col gap-12">
-              <p className="text-2xl font-semibold sm:font-bold text-gunmetal-50">
+              <p className="text-3xl font-semibold sm:font-bold text-gunmetal-50">
                 Fornecer soluções inovadoras e sustentáveis.
               </p>
 
               <Link
                 href="/pt/nossa-historia"
-                className="hidden md:inline-flex btn flex-nowrap truncate text-gunmetal-600 w-fit"
+                className="hidden md:inline-flex btn bg-gunmetal-50 flex-nowrap truncate text-gunmetal-600 w-fit"
               >
-                Conheça nossa história
-                <ArrowTopRightOnSquareIcon className="h-5 stroke-2 stroke-gunmetal-600" />
+                <span className="flex justify-center items-end gap-x-2">
+                  Conheça nossa história
+                  <ArrowTopRightOnSquareIcon className="h-4 stroke-2 stroke-gunmetal-600" />
+                </span>
               </Link>
             </div>
           </div>
@@ -47,8 +49,10 @@ export const Mission = () => {
             href="/pt/nossa-historia"
             className="md:hidden btn flex-nowrap truncate text-gunmetal-600 w-fit"
           >
-            Conheça nossa história
-            <ArrowTopRightOnSquareIcon className="h-5 stroke-2 stroke-gunmetal-600" />
+            <span>
+              Conheça nossa história
+              <ArrowTopRightOnSquareIcon className="h-4 stroke-2 stroke-gunmetal-600" />
+            </span>
           </Link>
 
           <p className="basis-full md:basis-1/2 text-base text-gunmetal-50">
