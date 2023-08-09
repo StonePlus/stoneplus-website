@@ -1,4 +1,4 @@
-import WppLogo from "@svg/wpp.png"
+import WppLogo from "@svg/wpp.png";
 
 import Image from "next/image";
 
