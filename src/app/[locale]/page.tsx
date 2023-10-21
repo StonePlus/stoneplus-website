@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <Partners />
       <Mission />
-      <Testimony />
+      {/* <Testimony /> */}
     </main>
   );
 }

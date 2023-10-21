@@ -1,16 +1,53 @@
+"use client";
+
+// External dependencies
+import { Url } from "next/dist/shared/lib/router/router";
 import Image from "next/image";
 import Link from "next/link";
+
+// Hooks
+import { useTranslations } from "next-intl";
+
+// SVG assets
 import StoneLogo from "@svg/logo.svg";
 import StoneBrand from "@svg/logo-brand.svg";
-import {
-  ArrowTopRightOnSquareIcon,
-  DocumentArrowDownIcon,
-  BookOpenIcon,
-  MapIcon,
-  PhoneArrowUpRightIcon,
-} from "@heroicons/react/24/outline";
+
+// Local components and utilities
+import { Links } from "../ui/Links";
+import { IconName } from "../ui/DynamicHeroIcons";
+
+type LinkData = {
+  href: Url;
+  label: string;
+  icon: IconName;
+};
 
 export const Footer = () => {
+  const t = useTranslations("Footer");
+
+  const linksData: LinkData[] = [
+    {
+      href: "#",
+      label: `${t("SiteMap.MenuItems.AboutUs")}`,
+      icon: "ArrowTopRightOnSquareIcon",
+    },
+    {
+      href: "#",
+      label: `${t("SiteMap.MenuItems.FrequentQuestions")}`,
+      icon: "ArrowTopRightOnSquareIcon",
+    },
+    {
+      href: "#",
+      label: `${t("SiteMap.MenuItems.ProductCatalog")}`,
+      icon: "DocumentArrowDownIcon",
+    },
+    {
+      href: "#",
+      label: `${t("SiteMap.MenuItems.PrivacyPolicies")}`,
+      icon: "BookOpenIcon",
+    },
+  ];
+
   return (
     <footer>
       <div className="footer justify-between gap-x-10 xl:gap-x-14 py-10 px-10 xl:px-12 2xl:px-16 bg-gunmetal-950 text-gunmetal-300">
@@ -19,95 +56,56 @@ export const Footer = () => {
             <Image alt="StonePlus" src={StoneBrand} height={40} />
           </h4>
           <p className="font-light max-w-sm text-gunmetal-200">
-            Somos uma empresa que se destaca no mercado pela elegância,
-            durabilidade e funcionalidade. Buscamos sempre oferecer soluções
-            personalizadas de acordo com as especificações dos nossos clientes.
+            {t("AboutUs")}
           </p>
         </section>
 
         <section className="place-items-start lg:justify-center w-full whitespace-nowrap">
           <h5 className="w-full pb-2 mb-2 font-bold text-lg border-b text-gunmetal-50 border-gunmetal-800 whitespace-nowrap">
-            Mapa do site
+            {t("SiteMap.Title")}
           </h5>
           <nav>
             <ul className="grid place-items-start gap-2">
-              <li>
-                <Link
-                  className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
-                  href="#"
-                >
-                  Quem somos
-                  <ArrowTopRightOnSquareIcon className="h-3 w-3 stroke-2 stroke-inherit" />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
-                  href="#"
-                >
-                  Perguntas frequentes
-                  <ArrowTopRightOnSquareIcon className="h-3 w-3 stroke-2 stroke-inherit" />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
-                  href="#"
-                >
-                  Catálogo de produtos
-                  <DocumentArrowDownIcon className="h-3 w-3 stroke-2 stroke-inherit" />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
-                  href="#"
-                >
-                  Políticas de privacidade
-                  <BookOpenIcon className="h-3 w-3 stroke-2 stroke-inherit" />
-                </Link>
-              </li>
+              {linksData.map((link, index) => (
+                <li key={index}>
+                  <Links href={link.href} label={link.label} icon={link.icon} />
+                </li>
+              ))}
             </ul>
           </nav>
         </section>
 
         <section className="place-items-start lg:justify-center w-full whitespace-nowrap">
           <h5 className="w-full pb-2 mb-2 font-bold text-lg text-gunmetal-50 border-b border-gunmetal-800 whitespace-nowrap">
-            Onde estamos
+            {t("Address.Title")}
           </h5>
           <address className="font-light whitespace-nowrap not-italic">
-            Avenida Antônio Sales, 535 - Loja 03 <br />
-            Joaquim Távora - Fortaleza - CE <br />
-            60135-100
+            {t("Address.MenuItems.AddressInfo1")} <br />
+            {t("Address.MenuItems.AddressInfo2")} <br />
+            {t("Address.MenuItems.AddressInfo3")}
           </address>
-          <Link
-            className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
+          <Links
             href="#"
-          >
-            Veja como chegar
-            <MapIcon className="h-3 w-3 stroke-2 stroke-inherit" />
-          </Link>
+            label={`${t("Address.MenuItems.AddressLink")}`}
+            icon="MapIcon"
+          />
         </section>
 
         <section className="place-items-start lg:justify-center w-full whitespace-nowrap">
           <h5 className="w-full pb-2 mb-2 font-bold text-lg text-gunmetal-50 border-b border-gunmetal-800 whitespace-nowrap">
-            Atendimento
+            {t("CostumerService.Title")}
           </h5>
           <address className="font-light whitespace-nowrap not-italic">
-            (85) 3260-2501 <br />
-            Horário de atendimento: <br />
-            Segunda à sexta das 9h às 17h
+            {t("CostumerService.MenuItems.ContactInfo1")} <br />
+            {t("CostumerService.MenuItems.ContactInfo2")} <br />
+            {t("CostumerService.MenuItems.ContactInfo3")}
           </address>
-          <Link
-            className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
+
+          <Links
             href="#"
-          >
-            Entre em contato
-            <PhoneArrowUpRightIcon className="h-3 w-3 stroke-2 stroke-inherit" />
-          </Link>
+            label={`${t("CostumerService.MenuItems.ContactLink")}`}
+            icon="PhoneArrowUpRightIcon"
+          />
         </section>
       </div>
 

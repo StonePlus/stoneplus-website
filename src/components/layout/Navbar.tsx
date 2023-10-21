@@ -1,19 +1,21 @@
 "use client";
 
 import Image from "next/image";
+import StoneLogo from "@svg/logo.svg";
+import { DynamicHeroIcon } from "../ui/DynamicHeroIcons";
+
+import { useTranslations } from "next-intl";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 
-import StoneLogo from "@svg/logo.svg";
-import {
-  GlobeAltIcon,
-  Bars3BottomRightIcon,
-} from "@heroicons/react/24/outline";
+import { LanguageSwitcher } from "../ui/LanguageSwitcher";
 
 export const Navbar = () => {
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
   }
   const scrollPosition = useScrollPosition();
+
+  const t = useTranslations("Navbar");
 
   return (
     <div
@@ -33,36 +35,17 @@ export const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="inline-flex flex-row px-1 gap-2 text-base text-gunmetal-50 font-bold uppercase">
           <li className="btn btn-ghost hover:bg-transparent rounded-btn text-gunmetal-50 hover:text-coral-500 font-bold">
-            <a>História</a>
+            <a>{t("about-us")}</a>
           </li>
 
           <li className="btn btn-ghost hover:bg-transparent rounded-btn text-gunmetal-50 hover:text-coral-500 font-bold">
-            <a>Catálago</a>
+            <a>{t("catalogue")}</a>
           </li>
         </ul>
       </div>
 
       <div className="navbar-end">
-        <div className="dropdown dropdown-end">
-          <label
-            tabIndex={0}
-            className="btn btn-ghost hover:bg-transparent text-gunmetal-50 hover:text-coral-500 font-bold"
-          >
-            <GlobeAltIcon className="h-6 w-6 text-inherit hover:text-inherit" />
-            PT
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
-          >
-            <li>
-              <a className="active">Item 1</a>
-            </li>
-            <li>
-              <a>Item 2</a>
-            </li>
-          </ul>
-        </div>
+        <LanguageSwitcher />
 
         {/* Mobile */}
         <div className="dropdown dropdown-end">
@@ -70,7 +53,9 @@ export const Navbar = () => {
             tabIndex={0}
             className="btn btn-ghost hover:bg-transparent lg:hidden text-gunmetal-50 hover:text-coral-500"
           >
-            <Bars3BottomRightIcon className="h-6 w-6 text-inherit hover:text-inherit stroke-2 stroke-gunmetal-50 hover:stroke-coral-500" />
+            <DynamicHeroIcon
+              icon="Bars3BottomRightIcon"
+            />
           </label>
 
           <ul

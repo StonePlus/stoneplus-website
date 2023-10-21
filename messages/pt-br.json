@@ -1,0 +1,45 @@
+{
+  "Navbar": {
+    "about-us": "História",
+    "catalogue": "Catálogo"
+  },
+  "Hero": {
+    "title": "Concreto Design",
+    "description": "Nosso compromisso é com a excelência"
+  },
+  "Language": {
+    "iso-code": "PT",
+    "lang": "Português (Brasil)",
+    "country": "Brasil"
+  },
+  "Footer": {
+    "AboutUs": "Somos uma empresa que se destaca no mercado pela elegância, durabilidade e funcionalidade. Buscamos sempre oferecer soluções personalizadas de acordo com as especificações dos nossos clientes.",
+    "SiteMap": {
+      "Title": "Mapa do site",
+      "MenuItems": {
+        "AboutUs": "Quem somos",
+        "FrequentQuestions": "Perguntas frequentes",
+        "ProductCatalog": "Catálogo de produtos",
+        "PrivacyPolicies": "Políticas de privacidade"
+      }
+    },
+    "Address": {
+      "Title": "Onde estamos",
+      "MenuItems": {
+        "AddressInfo1": "Avenida Antônio Sales, 535 - Loja 03",
+        "AddressInfo2": "Joaquim Távora - Fortaleza,CE",
+        "AddressInfo3": "60.135-100",
+        "AddressLink": "Veja como chegar"
+      }
+    },
+    "CostumerService": {
+      "Title": "Atendimento",
+      "MenuItems": {
+        "ContactInfo1": "(85) 3260-2501",
+        "ContactInfo2": "Horário de atendimento:",
+        "ContactInfo3": "Segunda à sexta das 9h às 17h",
+        "ContactLink": "Entre em contato"
+      }
+    }
+  }
+}
