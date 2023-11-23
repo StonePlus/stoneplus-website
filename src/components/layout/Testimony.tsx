@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import QuoteSecondarySvg from "@svg/quote-secondary.svg";
 
 export const Testimony = () => {

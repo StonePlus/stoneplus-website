@@ -15,7 +15,7 @@ export const LanguageSwitcher = () => {
     <div className="dropdown dropdown-end">
       <label
         tabIndex={0}
-        className="btn btn-ghost hover:bg-transparent text-gunmetal-50 hover:text-coral-500 font-bold"
+        className="btn btn-ghost px-0 hover:bg-transparent text-gunmetal-50 hover:text-coral-500 font-bold"
       >
         <DynamicHeroIcon
           icon="GlobeAltIcon"

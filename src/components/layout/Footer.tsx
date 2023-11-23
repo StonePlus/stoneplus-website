@@ -49,8 +49,8 @@ export const Footer = () => {
   ];
 
   return (
-    <footer>
-      <div className="footer justify-between gap-x-10 xl:gap-x-14 py-10 px-10 xl:px-12 2xl:px-16 bg-gunmetal-950 text-gunmetal-300">
+    <footer className="bg-gunmetal-950 xl:py-6">
+      <div className="footer justify-between gap-x-10 xl:gap-x-14 py-10 px-10 xl:px-4 max-w-screen-2xl mx-auto w-screen text-gunmetal-300">
         <section className="grid md:hidden lg:grid min-w-[220px] lg:justify-center w-full">
           <h4 className="flex flex-row items-center mb-2 font-bold normal-case text-3xl">
             <Image alt="StonePlus" src={StoneBrand} height={40} />
@@ -109,10 +109,10 @@ export const Footer = () => {
         </section>
       </div>
 
-      <div className="footer pb-4 px-10 xl:px-12 2xl:px-16 bg-gunmetal-950 text-gunmetal-200">
+      <div className="footer pb-4 px-10 xl:px-4 max-w-screen-2xl mx-auto w-screen text-gunmetal-200">
         <div className="items-center grid-flow-col">
           <Image
-            className="hidden md:grid lg:hidden"
+            className="grid lg:hidden"
             alt="StonePlus Logo"
             src={StoneLogo}
             width={20}

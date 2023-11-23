@@ -25,8 +25,11 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'hero': "url('../../../public/img/bg-hero.jpg')",
-      }
+        hero: "url('../../../public/img/bg-hero.jpg')",
+      },
+      daisyui: {
+        themes: [],
+      },
     },
   },
   plugins: [require("daisyui")],
