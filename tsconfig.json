@@ -21,8 +21,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@img/*": ["./public/img/*"],
-      "@svg/*": ["./public/img/svg/*"],
+      "@img/*": ["./public/images/*"],
+      "@svg/*": ["./src/components/svg/*"],
       "@hooks/*": ["./src/hooks/*"]
     }
   },

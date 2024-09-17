@@ -1,93 +1,67 @@
-import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-import QuoteSecondarySvg from "@svg/quote-secondary.svg";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export const Testimony = () => {
+  const t = useTranslations("Testimony");
+  const keys = [
+    "testimony-one",
+    "testimony-two",
+    "testimony-three",
+    "testimony-four",
+    "testimony-five",
+    "testimony-six",
+  ] as const;
+
   return (
-    <div className="bg-gunmetal-50">
-      <div className="flex flex-col gap-16 sm:gap-24 max-w-screen-xl mx-auto w-screen px-10 pt-16 pb-20">
-        <div className="flex flex-col gap-y-1">
-          <p className="text-coral-500">Depoimentos</p>
-          <h2 className="flex flex-col gap-y-2 text-3xl sm:text-5xl font-bold text-gunmetal-950">
-            O que falam sobre nós
-          </h2>
-        </div>
-
-        <div className="carousel flex flex-row flex-wrap md:flex-nowrap gap-x-12 gap-y-10 w-full h-fit place-items-start">
-          <div id="testimony1" className="carousel-item w-full">
-            <div className="flex flex-row place-content-start basis-full md:basis-1/2 gap-x-3 md:gap-x-6">
-              <Image
-                className="hidden sm:block max-h-12 relative text-9xl -top-5"
-                src={QuoteSecondarySvg}
-                width={48}
-                height={48}
-                alt="Quote icon"
-              />
-              <Image
-                className="sm:hidden max-h-12 relative text-9xl -top-5"
-                src={QuoteSecondarySvg}
-                width={32}
-                height={32}
-                alt="Quote icon"
-              />
-              <div className="flex flex-col gap-12">
-                <p className="basis-full md:basis-1/2 text-lg text-gunmetal-950 font-medium">
-                  Minha experiência com a StonePlus tem sido excepcional. Os
-                  produtos oferecidos pela empresa são elegantes, duráveis e
-                  funcionais, além de serem personalizados de acordo com as
-                  necessidades do cliente.
-                </p>
-              </div>
-            </div>
-
-            <p className="basis-full md:basis-1/2 text-base text-gunmetal-950">
-              Minha experiência com a StonePlus tem sido excepcional. Os
-              produtos oferecidos pela empresa são elegantes, duráveis e
-              funcionais, além de serem personalizados de acordo com as
-              necessidades do cliente.
-            </p>
+    <section className="overflow-hidden bg-base-200">
+      <div className="mx-auto flex max-w-screen-2xl flex-col px-14 pb-20 pt-32">
+        <h1 className="text-5xl font-bold">{t("title")}</h1>
+        <span>
+          <div className="divider divider-end mb-12 font-medium text-primary">
+            <button className="btn btn-circle btn-secondary">
+              <ArrowLeftIcon className="size-4" />
+            </button>
+            <button className="btn btn-circle btn-secondary">
+              <ArrowRightIcon className="size-4" />
+            </button>
           </div>
+        </span>
 
-          <div id="testimony2" className="carousel-item w-full">
-            <div className="flex flex-row place-content-start basis-full md:basis-1/2 gap-x-3 md:gap-x-6">
-              <Image
-                className="hidden sm:block max-h-12 relative text-9xl -top-5"
-                src={QuoteSecondarySvg}
-                width={48}
-                height={48}
-                alt="Quote icon"
-              />
-              <Image
-                className="sm:hidden max-h-12 relative text-9xl -top-5"
-                src={QuoteSecondarySvg}
-                width={32}
-                height={32}
-                alt="Quote icon"
-              />
-              <div className="flex flex-col gap-12">
-                <p className="basis-full md:basis-1/2 text-lg text-gunmetal-950 font-medium">
-                  Minha experiência com a StonePlus tem sido excepcional. Os
-                  produtos oferecidos pela empresa são elegantes, duráveis e
-                  funcionais, além de serem personalizados de acordo com as
-                  necessidades do cliente.
-                </p>
+        <span className="inline-flex gap-12">
+          <div className="carousel gap-12 overflow-visible">
+            {keys.map((key) => (
+              <div
+                key={key}
+                className="carousel-item flex flex-col overflow-visible"
+              >
+                <div className="chat chat-start overflow-visible">
+                  <div className="chat-bubble max-w-xs bg-base-100 p-6 text-base-content shadow-2xl">
+                    {t(`${key}.feedback`)}
+                  </div>
+                </div>
+                <span className="mt-4 inline-flex items-center justify-start gap-4">
+                  <div className="avatar">
+                    <div className="size-12 rounded-full">
+                      <img
+                        alt="Tailwind CSS chat bubble component"
+                        src={t(`${key}.photo`)}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col">
+                    <p className="font-bold">{t(`${key}.name`)}</p>
+                    <small className="font-light">
+                      {t(`${key}.description`)}
+                    </small>
+                  </div>
+                </span>
               </div>
-            </div>
-
-            <p className="basis-full md:basis-1/2 text-base text-gunmetal-950">
-              Minha experiência com a StonePlus tem sido excepcional. Os
-              produtos oferecidos pela empresa são elegantes, duráveis e
-              funcionais, além de serem personalizados de acordo com as
-              necessidades do cliente.
-            </p>
+            ))}
           </div>
-        </div>
-
-        <div className="flex justify-center w-full py-2 gap-2">
-          <a href="#testimony1" className="btn btn-xs"></a>
-          <a href="#testimony2" className="btn btn-xs"></a>
-        </div>
+        </span>
       </div>
-    </div>
+    </section>
   );
 };

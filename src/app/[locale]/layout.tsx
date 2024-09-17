@@ -4,10 +4,9 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
 import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
+import { getMessages } from "next-intl/server";
 
-import { Navbar } from "@/components/layout/Navbar";
-import { WppToast } from "@/components/ui/WppToast";
+import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -22,30 +21,21 @@ export function generateStaticParams() {
   return [{ locale: "pt-br" }, { locale: "en" }];
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: {
-    locale: string;
-  };
+  params: { locale: string };
 }) {
-  let messages;
-
-  try {
-    messages = (await import(`../../../messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
+  const messages = await getMessages();
 
   return (
-    <html className="scroll-smooth overflow-x-hidden" lang={locale}>
+    <html data-theme="customtheme" lang={locale}>
       <body className={openSans.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
+        <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
-          <WppToast />
           <Footer />
         </NextIntlClientProvider>
       </body>

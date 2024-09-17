@@ -1,16 +1,106 @@
 {
-  "Navbar": {
+  "Header": {
     "about-us": "História",
-    "catalogue": "Catálogo"
-  },
-  "Hero": {
-    "title": "Concreto Design",
-    "description": "Nosso compromisso é com a excelência"
+    "catalogue": "Catálogo",
+    "call-us": "Fale conosco"
   },
   "Language": {
     "iso-code": "PT",
     "lang": "Português (Brasil)",
     "country": "Brasil"
+  },
+  "Hero": {
+    "title": "Transformando casas em lares.",
+    "description": "Renove seus ambientes com nossa seleção inovadora. Nossos produtos adicionam beleza, funcionalidade e sofisticação, refletindo sua personalidade única.",
+    "button": "Peça o seu orçamento"
+  },
+  "Mission": {
+    "badge": "No que acreditamos",
+    "title": "Nosso compromisso é com a excelência e a integridade.",
+    "description": "Na StonePlus, buscamos liderar o mercado oferecendo excelência no atendimento e promovendo um ambiente ético, inclusivo e de desenvolvimento para nossos colaboradores.",
+    "vision-title": "Visão",
+    "vision-description": "Ser reconhecida como líder em inovação e qualidade, estabelecendo novos padrões de excelência e contribuindo para um futuro sustentável e próspero.",
+    "mission-title": "Missão",
+    "mission-description": "Entregar soluções que superem as expectativas, promovendo inovação e aprimoramento contínuo, com um compromisso firme com a ética e a responsabilidade social.",
+    "values-title": "Valores",
+    "values-description": "Promover a integridade e a transparência em todas as ações. Buscar excelência e inovação constante. Fomentar um ambiente inclusivo e respeitoso, com compromisso com a sustentabilidade."
+  },
+  "CallToAction": {
+    "title": "Tem um projeto em mente?",
+    "description": "Vamos conversar!",
+    "button": "Fale conosco",
+    "tooltip": "É sem compromisso! 😉"
+  },
+  "Testimony": {
+    "title": "O que falam os nossos clientes",
+    "testimony-one": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-two": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-three": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-four": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-five": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-six": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    }
+  },
+  "Faq": {
+    "badge": "Perguntas Frequentes",
+    "title": "Confira as dúvidas dos nossos clientes",
+    "requestQuote": {
+      "title": "Como faço para solicitar um orçamento?",
+      "description": "Para empresas, entre em contato com nosso time de vendas corporativas para um orçamento personalizado. Clientes finais podem solicitar cotações diretamente pelo nosso site ou por telefone."
+    },
+    "shippingBrazil": {
+      "title": "Vocês fazem envios para todo o Brasil?",
+      "description": "Sim, atendemos todas as regiões do Brasil, com parceiros de logística para garantir que o seu pedido chegue com segurança e no prazo combinado."
+    },
+    "deliveryTime": {
+      "title": "Qual é o prazo de entrega?",
+      "description": "O prazo de entrega pode variar de acordo com o tipo de produto e a quantidade solicitada. Normalmente, entregamos em até 10 dias úteis para clientes finais."
+    },
+    "sampleRequest": {
+      "title": "Posso solicitar amostras de revestimentos?",
+      "description": "Sim, disponibilizamos amostras para que você possa avaliar a qualidade e aparência dos nossos produtos antes de efetuar a compra."
+    },
+    "bulkOrders": {
+      "title": "Vocês oferecem condições especiais para grandes pedidos?",
+      "description": "Sim! Para construtoras, arquitetos ou revendedores, oferecemos preços diferenciados e condições especiais para pedidos em grande volume."
+    },
+    "warranty": {
+      "title": "Os revestimentos têm garantia?",
+      "description": "Sim, todos os nossos revestimentos possuem garantia contra defeitos de fabricação. Detalhes da garantia estão disponíveis na página de cada produto."
+    },
+    "paymentOptions": {
+      "title": "Quais são as opções de pagamento?",
+      "description": "Aceitamos cartões de crédito, transferência bancária e, para empresas, oferecemos faturamento mediante análise de crédito."
+    }
   },
   "Footer": {
     "AboutUs": "Somos uma empresa que se destaca no mercado pela elegância, durabilidade e funcionalidade. Buscamos sempre oferecer soluções personalizadas de acordo com as especificações dos nossos clientes.",

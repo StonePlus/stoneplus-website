@@ -1,0 +1,135 @@
+{
+  "Header": {
+    "about-us": "History",
+    "catalogue": "Catalog",
+    "call-us": "Contact us"
+  },
+  "Language": {
+    "iso-code": "EN",
+    "lang": "English (USA)",
+    "country": "United States of America"
+  },
+  "Hero": {
+    "title": "Turning houses into homes.",
+    "description": "Refresh your spaces with our unique selection. Our items bring beauty, function, and style, showcasing your distinct personality.",
+    "button": "Request a quote"
+  },
+  "Mission": {
+    "badge": "What We Believe In",
+    "title": "Our commitment is to excellence and integrity.",
+    "description": "At StonePlus, we strive to lead the market by offering excellence in service and promoting an ethical, inclusive environment for our employees to grow and develop.",
+    "vision-title": "Vision",
+    "vision-description": "To be recognized as a leader in innovation and quality, setting new standards of excellence and contributing to a sustainable and prosperous future.",
+    "mission-title": "Mission",
+    "mission-description": "Deliver solutions that exceed expectations, fostering innovation and continuous improvement, with a firm commitment to ethics and social responsibility.",
+    "values-title": "Values",
+    "values-description": "Promote integrity and transparency in all actions. Pursue constant excellence and innovation. Foster an inclusive and respectful environment, with a commitment to sustainability."
+  },
+  "CallToAction": {
+    "title": "Ready to transform your space?",
+    "description": "Let's talk!",
+    "button": "Get in touch",
+    "tooltip": "No strings attached! 😉"
+  },
+  "Testimony": {
+    "title": "What our clients are saying",
+    "testimony-one": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-two": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-three": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-four": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-five": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    },
+    "testimony-six": {
+      "name": "Amarilio de Oliveira",
+      "description": "Funcionário - Desenvolvedor Fullstack",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+      "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
+    }
+  },
+  "Faq": {
+    "badge": "Frequently Asked Questions",
+    "title": "Check out our customers' questions",
+    "requestQuote": {
+      "title": "How do I request a quote?",
+      "description": "For businesses, please contact our corporate sales team for a personalized quote. End customers can request quotes directly through our website or by phone."
+    },
+    "shippingBrazil": {
+      "title": "Do you ship to all of Brazil?",
+      "description": "Yes, we serve all regions of Brazil, with logistics partners to ensure your order arrives safely and on time."
+    },
+    "deliveryTime": {
+      "title": "What is the delivery time?",
+      "description": "Delivery time may vary depending on the type of product and the quantity ordered. Typically, we deliver within 10 business days for end customers."
+    },
+    "sampleRequest": {
+      "title": "Can I request samples of coatings?",
+      "description": "Yes, we provide samples so you can evaluate the quality and appearance of our products before making a purchase."
+    },
+    "bulkOrders": {
+      "title": "Do you offer special conditions for large orders?",
+      "description": "Yes! For construction companies, architects, or resellers, we offer special pricing and conditions for bulk orders."
+    },
+    "warranty": {
+      "title": "Do the coatings come with a warranty?",
+      "description": "Yes, all of our coatings come with a warranty against manufacturing defects. Warranty details are available on each product page."
+    },
+    "paymentOptions": {
+      "title": "What are the payment options?",
+      "description": "We accept credit cards, bank transfers, and, for businesses, we offer billing subject to credit analysis."
+    }
+  },
+  "Footer": {
+    "AboutUs": "We are a company that stands out in the market for elegance, durability, and functionality. We always aim to provide customized solutions according to our clients' specifications.",
+    "SiteMap": {
+      "Title": "Site map",
+      "MenuItems": {
+        "AboutUs": "Who we are",
+        "FrequentQuestions": "Frequently Asked Questions",
+        "ProductCatalog": "Product Catalog",
+        "PrivacyPolicies": "Privacy Policies"
+      }
+    },
+    "Address": {
+      "Title": "Where we are",
+      "MenuItems": {
+        "AddressInfo1": "Avenida Antônio Sales, 535 - Store 03",
+        "AddressInfo2": "Joaquim Távora - Fortaleza,CE (Brazil)",
+        "AddressInfo3": "60.135-100",
+        "AddressLink": "See how to get there"
+      }
+    },
+    "CostumerService": {
+      "Title": "Costumer service",
+      "MenuItems": {
+        "ContactInfo1": "+55 85 3260-2501",
+        "ContactInfo2": "Opening hours:",
+        "ContactInfo3": "Monday to friday from 9am to 5pm",
+        "ContactLink": "Contact us"
+      }
+    }
+  }
+}

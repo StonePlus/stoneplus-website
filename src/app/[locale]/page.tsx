@@ -1,3 +1,5 @@
+import { CallToAction } from "@/components/layout/CallToAction";
+import Faq from "@/components/layout/Faq";
 import { Hero } from "@/components/layout/Hero";
 import { Mission } from "@/components/layout/Mission";
 import { Partners } from "@/components/layout/Partners";
@@ -9,7 +11,9 @@ export default function Home() {
       <Hero />
       <Partners />
       <Mission />
-      {/* <Testimony /> */}
+      <CallToAction />
+      <Testimony />
+      <Faq />
     </main>
   );
 }
