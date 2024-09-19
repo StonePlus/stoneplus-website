@@ -44,6 +44,12 @@ export async function generateMetadata({ params: { locale } }: IntlProps) {
           height: 600,
           alt: t("title"),
         },
+        {
+          url: "/images/whatsapp-banner.png",
+          width: 400,
+          height: 400,
+          alt: t("title"),
+        },
       ],
     },
     twitter: {
