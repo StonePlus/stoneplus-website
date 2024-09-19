@@ -7,7 +7,9 @@ import { Mission } from "@/components/layout/Mission";
 import { Partners } from "@/components/layout/Partners";
 import { Testimony } from "@/components/layout/Testimony";
 
-export default function Home({ params: { locale } }: any) {
+import { IntlProps } from "@/types/intl";
+
+export default function Home({ params: { locale } }: IntlProps) {
   unstable_setRequestLocale(locale);
   return (
     <main>

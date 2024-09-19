@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import { IntlProps } from "@/types/intl";
+
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
@@ -9,6 +11,7 @@ import { routing } from "@/i18n/routing";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -27,7 +30,7 @@ export default async function LocaleLayout({
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: IntlProps["params"];
 }) {
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
