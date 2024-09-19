@@ -6,20 +6,29 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
 import { NextIntlClientProvider } from "next-intl";
-import { unstable_setRequestLocale, getMessages } from "next-intl/server";
+import {
+  unstable_setRequestLocale,
+  getMessages,
+  getTranslations,
+} from "next-intl/server";
 import { routing } from "@/i18n/routing";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-
 const openSans = Open_Sans({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "StonePlus - Concrete Design",
-  description:
-    "Indústria especializada em Cimentícios, Bordas de Piscina, Revestimentos e Pedras Naturais.",
-};
+export async function generateMetadata({ params: { locale } }: IntlProps) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "MetaDate" });
+
+  return {
+    title: {
+      default: t("title"),
+    },
+    description: t("description"),
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
