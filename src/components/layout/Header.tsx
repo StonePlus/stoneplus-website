@@ -29,7 +29,7 @@ export const Header = () => {
       <div className="navbar mx-auto max-w-screen-2xl px-14">
         <div className="navbar-start">
           <Link
-            href="/"
+            href={t("home-link")}
             className="group btn btn-ghost px-0 text-2xl font-bold tracking-tight"
           >
             <Brandmark className="size-6 fill-neutral-content group-hover:fill-primary" />

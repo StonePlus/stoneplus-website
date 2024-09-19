@@ -4,6 +4,7 @@
     "description": "A company specializing in Cement Products, Pool Edges, Coatings, and Natural Stones."
   },
   "Header": {
+    "home-link": "/en-us",
     "about-us": "History",
     "catalogue": "Catalog",
     "catalogue-link": "/pdfs/catalogo-stoneplus-2024.pdf",
