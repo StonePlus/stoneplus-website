@@ -7,7 +7,7 @@ export const CallToAction = () => {
 
   return (
     <section className="bg-primary">
-      <div className="mx-auto w-screen max-w-screen-2xl px-14 py-20">
+      <div className="mx-auto w-full max-w-screen-2xl px-14 py-20">
         <div className="inline-flex w-full items-center justify-between">
           <h2 className="flex flex-col gap-6 text-5xl font-bold text-primary-content">
             <span>{t("title")}</span>
