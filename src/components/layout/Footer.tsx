@@ -83,7 +83,9 @@ export const Footer = () => {
             {t("Address.MenuItems.AddressInfo3")}
           </address>
           <Links
-            href="#"
+            href="https://maps.app.goo.gl/xXJxCxLep13Pd3cC9"
+            target="_blank"
+            rel="noopener noreferrer"
             label={`${t("Address.MenuItems.AddressLink")}`}
             icon="MapIcon"
           />
