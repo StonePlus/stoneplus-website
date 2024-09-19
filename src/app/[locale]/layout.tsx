@@ -34,7 +34,7 @@ export async function generateMetadata({ params: { locale } }: IntlProps) {
     },
     openGraph: {
       type: "website",
-      url: `https://stoneplus.com.br/${locale}`,
+      url: `https://stoneplus.com.br/`,
       title: t("title"),
       description: t("description"),
       images: [
@@ -48,7 +48,7 @@ export async function generateMetadata({ params: { locale } }: IntlProps) {
     },
     twitter: {
       card: "summary_large_image",
-      url: `https://stoneplus.com.br/${locale}`,
+      url: `https://stoneplus.com.br/`,
       title: t("title"),
       description: t("description"),
       image: "/images/banner.png",
