@@ -22,6 +22,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@img/*": ["./public/images/*"],
+      "@pdf/*": ["./public/pdfs/*"],
       "@svg/*": ["./src/components/svg/*"],
       "@hooks/*": ["./src/hooks/*"]
     }

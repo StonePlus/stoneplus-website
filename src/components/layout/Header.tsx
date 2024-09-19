@@ -16,7 +16,6 @@ export const Header = () => {
     return classes.filter(Boolean).join(" ");
   }
   const scrollPosition = useScrollPosition();
-
   const t = useTranslations("Header");
 
   return (
@@ -43,7 +42,9 @@ export const Header = () => {
           <ul className="inline-flex flex-row gap-2 px-1 text-base font-bold uppercase">
             <li className="hover: btn btn-ghost rounded-btn font-bold hover:text-primary">
               <Link
-                href={"/"}
+                href={t("catalogue-link")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2"
               >
                 {t("catalogue")}
