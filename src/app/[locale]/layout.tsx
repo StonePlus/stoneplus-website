@@ -27,6 +27,32 @@ export async function generateMetadata({ params: { locale } }: IntlProps) {
       default: t("title"),
     },
     description: t("description"),
+    icons: {
+      icon: ["/images/icons/favicon.ico?v=4"],
+      apple: ["images/icons/apple-touch-icon.png?v=4"],
+      shortcut: ["/images/icons/apple-touch-icon.png"],
+    },
+    openGraph: {
+      type: "website",
+      url: `https://stoneplus.com.br/${locale}`,
+      title: t("title"),
+      description: t("description"),
+      images: [
+        {
+          url: "/images/banner.png",
+          width: 800,
+          height: 600,
+          alt: t("title"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      url: `https://stoneplus.com.br/${locale}`,
+      title: t("title"),
+      description: t("description"),
+      image: "/images/banner.png",
+    },
   };
 }
 
