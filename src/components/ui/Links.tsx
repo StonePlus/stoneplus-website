@@ -6,6 +6,8 @@ import { DynamicHeroIcon, IconName } from "./DynamicHeroIcons";
 interface LinksProps {
   href: Url;
   label: string;
+  target?: string;
+  rel?: string;
   icon?: IconName;
 }
 
@@ -17,11 +19,19 @@ interface LinksProps {
  * @returns {React.FC} The rendered HeroIcon.
  */
 
-export const Links: React.FC<LinksProps> = ({ label, icon, href }) => {
+export const Links: React.FC<LinksProps> = ({
+  label,
+  icon,
+  href,
+  target,
+  rel,
+}) => {
   return (
     <Link
-      className="flex items-center gap-2 whitespace-nowrap hover:text-gunmetal-50 stroke-gunmetal-300 hover:stroke-gunmetal-50 "
+      className="flex items-center gap-2 whitespace-nowrap stroke-gunmetal-300 hover:stroke-gunmetal-50 hover:text-gunmetal-50"
       href={href}
+      target={target}
+      rel={rel}
     >
       {label}
       {icon && <DynamicHeroIcon icon={icon} />}

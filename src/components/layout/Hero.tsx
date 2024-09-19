@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export const Hero = () => {
   const t = useTranslations("Hero");
@@ -17,9 +18,14 @@ export const Hero = () => {
           <div className="inline-flex w-full items-center justify-between">
             <p className="max-w-xl">{t("description")}</p>
 
-            <button className="btn btn-primary">
+            <Link
+              href="https://wa.me/558532602501"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
               <span>{t("button")}</span> <ArrowRightIcon className="size-4" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

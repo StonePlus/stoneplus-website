@@ -100,7 +100,9 @@ export const Footer = () => {
           </address>
 
           <Links
-            href="#"
+            href="https://wa.me/558532602501"
+            target="_blank"
+            rel="noopener noreferrer"
             label={`${t("CostumerService.MenuItems.ContactLink")}`}
             icon="PhoneArrowUpRightIcon"
           />

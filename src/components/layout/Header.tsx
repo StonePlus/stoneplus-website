@@ -53,7 +53,9 @@ export const Header = () => {
 
             <li className="hover: btn btn-ghost rounded-btn font-bold hover:text-primary">
               <Link
-                href={"/"}
+                href="https://wa.me/558532602501"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2"
               >
                 {t("call-us")}

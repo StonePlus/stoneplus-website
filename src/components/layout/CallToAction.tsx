@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { useTranslations } from "next-intl";
 
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -15,10 +17,15 @@ export const CallToAction = () => {
           </h2>
 
           <div className="tooltip tooltip-open" data-tip={t("tooltip")}>
-            <button className="btn btn-wide mt-2 justify-between">
+            <Link
+              href="https://wa.me/558532602501"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-wide mt-2 justify-between"
+            >
               <span>{t("button")}</span>
               <ArrowRightIcon className="size-4" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
