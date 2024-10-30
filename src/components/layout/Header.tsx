@@ -26,7 +26,7 @@ export const Header = () => {
         "fixed z-50 w-full text-neutral-content duration-200 ease-in-out hover:bg-neutral",
       )}
     >
-      <div className="navbar mx-auto max-w-screen-2xl px-14">
+      <div className="navbar mx-auto max-w-screen-2xl px-4 md:px-14">
         <div className="navbar-start">
           <Link
             href={t("home-link")}
@@ -54,7 +54,7 @@ export const Header = () => {
 
             <li className="hover: btn btn-ghost rounded-btn font-bold hover:text-primary">
               <Link
-                href="https://wa.me/558532602501"
+                href={t("call-us-link")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2"
@@ -66,39 +66,43 @@ export const Header = () => {
           </ul>
         </div>
 
-        <div className="navbar-end">
+        <div className="navbar-end gap-2 sm:gap-6 lg:gap-0">
           <LanguageSwitcher />
 
           {/* Mobile */}
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="hover: btn btn-ghost px-2 lg:hidden">
+            <label
+              tabIndex={0}
+              className="hover: btn btn-ghost pl-2 pr-0 lg:hidden"
+            >
               <Bars3BottomRightIcon className="size-6" />
             </label>
-
-            <ul
-              tabIndex={0}
-              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-            >
-              <li>
-                <a>História</a>
-              </li>
-
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a>Item 3</a>
-              </li>
-            </ul>
+            <nav tabIndex={0} className="menu dropdown-content z-[1] w-52">
+              <ul className="mt-2 w-full rounded-box bg-neutral bg-opacity-70 p-2 shadow">
+                <li>
+                  <Link
+                    href={t("catalogue-link")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:bg-neutral hover:text-primary"
+                  >
+                    <ClipboardDocumentListIcon className="size-5" />
+                    {t("catalogue")}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={t("call-us-link")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:bg-neutral hover:text-primary"
+                  >
+                    <ChatBubbleBottomCenterTextIcon className="size-5" />
+                    {t("call-us")}
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
