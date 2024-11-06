@@ -14,8 +14,8 @@ export const Testimony = () => {
   ] as const;
 
   return (
-    <section className="overflow-hidden bg-base-200">
-      <div className="mx-auto flex max-w-screen-2xl flex-col px-14 pb-20 pt-32">
+    <section className="overflow-hidden">
+      <div className="mx-auto flex max-w-screen-xl flex-col px-14 pb-20 pt-32">
         <h1 className="text-5xl font-bold">{t("title")}</h1>
         <span>
           <div className="divider divider-end mb-12 font-medium text-primary">

@@ -28,7 +28,7 @@ export const Links: React.FC<LinksProps> = ({
 }) => {
   return (
     <Link
-      className="flex items-center gap-2 whitespace-nowrap stroke-gunmetal-300 hover:stroke-gunmetal-50 hover:text-gunmetal-50"
+      className="flex items-center gap-2 whitespace-nowrap stroke-base-300 hover:stroke-neutral-content hover:text-neutral-content"
       href={href}
       target={target}
       rel={rel}

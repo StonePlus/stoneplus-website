@@ -32,15 +32,15 @@ export const Header = () => {
             href={t("home-link")}
             className="group btn btn-ghost px-0 text-2xl font-bold tracking-tight"
           >
-            <Brandmark className="size-6 fill-neutral-content group-hover:fill-primary" />
-            <span className="group-hover:text-primary">StonePlus</span>
+            <Brandmark className="size-6 fill-neutral-content group-hover:fill-secondary" />
+            <span className="group-hover:text-secondary">StonePlus</span>
           </Link>
         </div>
 
         {/* Desktop */}
         <div className="navbar-center hidden lg:flex">
           <ul className="inline-flex flex-row gap-2 px-1 text-base font-bold uppercase">
-            <li className="hover: btn btn-ghost rounded-btn font-bold hover:text-primary">
+            <li className="hover: btn btn-ghost rounded-btn font-bold hover:text-secondary">
               <Link
                 href={t("catalogue-link")}
                 target="_blank"
@@ -52,7 +52,7 @@ export const Header = () => {
               </Link>
             </li>
 
-            <li className="hover: btn btn-ghost rounded-btn font-bold hover:text-primary">
+            <li className="hover: btn btn-ghost rounded-btn font-bold hover:text-secondary">
               <Link
                 href={t("call-us-link")}
                 target="_blank"
@@ -84,7 +84,7 @@ export const Header = () => {
                     href={t("catalogue-link")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:bg-neutral hover:text-primary"
+                    className="flex items-center gap-2 hover:bg-neutral hover:text-secondary"
                   >
                     <ClipboardDocumentListIcon className="size-5" />
                     {t("catalogue")}
@@ -95,7 +95,7 @@ export const Header = () => {
                     href={t("call-us-link")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:bg-neutral hover:text-primary"
+                    className="flex items-center gap-2 hover:bg-neutral hover:text-secondary"
                   >
                     <ChatBubbleBottomCenterTextIcon className="size-5" />
                     {t("call-us")}

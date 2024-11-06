@@ -8,17 +8,19 @@ import { Partners } from "@/components/layout/Partners";
 import { Testimony } from "@/components/layout/Testimony";
 
 import { IntlProps } from "@/types/intl";
+import FindUs from "@/components/layout/FindUs";
 
 export default function Home({ params: { locale } }: IntlProps) {
   unstable_setRequestLocale(locale);
   return (
-    <main>
+    <main className="bg-gradient-to-b from-base-200 from-75% to-primary">
       <Hero />
       <Partners />
       <Mission />
-      <CallToAction />
       <Testimony />
       <Faq />
+      <FindUs />
+      <CallToAction />
     </main>
   );
 }

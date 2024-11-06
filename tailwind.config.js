@@ -55,12 +55,12 @@ module.exports = {
     themes: [
       {
         stoneplus: {
-          "primary": "#E55937",
-          "primary-content": "#F7F8F8",
-          "secondary": "#F0A08E",
-          "secondary-content": "#AC4329",
-          "accent": "#E2451E",
-          "accent-content": "#F7F8F8",
+          "primary": "#F7F8F8",
+          "primary-content": "#121C22",
+          "secondary": "#E44E29",
+          "secondary-content": "#F7F8F8",
+          "accent": "#FEDC00",
+          "accent-content": "#121C22",
           "neutral": "#121C22",
           "neutral-content": "#F7F8F8",
           "base-100": "#F7F8F8",

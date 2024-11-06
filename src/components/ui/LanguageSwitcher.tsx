@@ -24,7 +24,7 @@ export const LanguageSwitcher = () => {
     <div className="dropdown dropdown-end dropdown-hover">
       <label
         tabIndex={0}
-        className="btn btn-ghost gap-1 px-0 font-bold hover:text-primary sm:gap-2"
+        className="btn btn-ghost gap-1 px-0 font-bold hover:text-secondary sm:gap-2"
       >
         <GlobeAltIcon className="size-6 hover:text-inherit" />
         {locale.toUpperCase()}
@@ -36,7 +36,7 @@ export const LanguageSwitcher = () => {
             <button
               onClick={() => handleLocaleChange('pt-br')}
               disabled={isPending}
-              className="flex items-center gap-2 hover:bg-neutral hover:text-primary"
+              className="flex items-center gap-2 hover:bg-neutral hover:text-secondary"
             >
               <Image alt="Brazilian flag." src={PtBrFlag} className="size-5" />
               Português &#40;Brasil&#41;
@@ -46,7 +46,7 @@ export const LanguageSwitcher = () => {
             <button
               onClick={() => handleLocaleChange('en-us')}
               disabled={isPending}
-              className="flex items-center gap-2 hover:bg-neutral hover:text-primary"
+              className="flex items-center gap-2 hover:bg-neutral hover:text-secondary"
             >
               <Image alt="American flag." src={EnFlag} className="size-5" />
               English &#40;USA&#41;

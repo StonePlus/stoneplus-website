@@ -25,7 +25,7 @@ export const Hero = () => {
               href="https://wa.me/558532602501"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary btn-block sm:btn-wide"
+              className="btn btn-secondary btn-block sm:btn-wide"
             >
               <span>{t("button")}</span> <ArrowRightIcon className="size-4" />
             </Link>

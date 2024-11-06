@@ -47,8 +47,8 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gunmetal-950 xl:py-6">
-      <div className="footer w-screen max-w-screen-2xl justify-between gap-x-10 px-4 py-12 text-gunmetal-300 md:px-14 md:py-16 xl:gap-x-14">
+    <footer className="bg-gradient-to-b from-neutral from-75% to-[#0f2f42]">
+      <div className="footer max-w-screen-xl justify-between gap-x-10 px-4 py-12 text-base-300 md:mx-auto md:px-14 md:py-16 xl:gap-x-14">
         <section className="grid w-full min-w-[220px] md:hidden lg:grid lg:justify-center">
           <h4 className="mb-2 flex flex-row items-center text-3xl font-bold normal-case">
             <Image alt="StonePlus" src={StoneBrand} height={40} />
@@ -111,17 +111,15 @@ export const Footer = () => {
         </section>
       </div>
 
-      <div className="footer max-w-screen-2xl px-14 px-4 py-12 md:px-14 md:py-16 text-gunmetal-200">
-        <div className="grid-flow-col items-center">
-          <Brandmark className="grid size-5 lg:hidden" />
-          <small className="text-sm">
-            &copy; 2024 StonePlus - Concrete Design
-          </small>
-        </div>
+      <div className="footer max-w-screen-xl gap-0 text-base-200 md:mx-auto">
+        <SocialLinks className="md:order-last md:justify-items-end" />
 
-        <nav className="md:place-self-center md:justify-self-end">
-          <SocialLinks />
-        </nav>
+        <small className="w-full grid-flow-col items-center justify-center border-t border-base-300 border-opacity-10 py-5 md:h-full md:justify-start md:border-b-0 md:px-14 md:py-4">
+          <Brandmark className="grid size-5 fill-base-200 md:w-fit lg:hidden" />
+          <span className="text-sm">
+            &copy; 2024 StonePlus - Concrete Design
+          </span>
+        </small>
       </div>
     </footer>
   );

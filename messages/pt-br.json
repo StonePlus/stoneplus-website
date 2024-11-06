@@ -32,9 +32,12 @@
     "values-title": "Valores",
     "values-description": "Promover a integridade e a transparência em todas as ações. Buscar excelência e inovação constante. Fomentar um ambiente inclusivo e respeitoso, com compromisso com a sustentabilidade."
   },
+  "FindUs": {
+    "language": "pt-br"
+  },
   "CallToAction": {
     "title": "Tem um projeto em mente?",
-    "description": "Vamos conversar!",
+    "description": "Vamos conversar e descobrir como transformar sua visão em realidade!",
     "button": "Consulte nossa equipe",
     "tooltip": "É sem compromisso! 😉"
   },

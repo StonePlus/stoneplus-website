@@ -8,20 +8,27 @@ export const CallToAction = () => {
   const t = useTranslations("CallToAction");
 
   return (
-    <section className="bg-primary">
-      <div className="mx-auto w-full max-w-screen-2xl px-4 md:px-14 py-8 md:py-20">
-        <div className="w-full items-center justify-between md:inline-flex">
-          <h2 className="flex flex-col gap-6 font-bold text-primary-content">
-            <span className="text-3xl md:text-5xl">{t("title")}</span>
-            <span className="text-xl">{t("description")}</span>
+    <section className="bg-secondary">
+      <div className="mx-auto w-full max-w-screen-xl px-4 py-16 md:px-14 md:py-24">
+        <div className="w-full items-center justify-between">
+          <h2 className="flex flex-col gap-6 text-secondary-content">
+            <span className="text-center text-3xl font-bold md:text-5xl">
+              <p>
+                Tem <span className="text-accent">um projeto</span> em mente?
+              </p>
+            </span>
+            <span className="text-center text-base">{t("description")}</span>
           </h2>
 
-          <div className="tooltip md:tooltip-open" data-tip={t("tooltip")}>
+          <div
+            className="tooltip tooltip-open mt-16 w-full"
+            data-tip={t("tooltip")}
+          >
             <Link
               href="https://wa.me/558532602501"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-wide mt-2 justify-between"
+              className="btn btn-block mt-2 justify-between text-base sm:btn-wide"
             >
               <span>{t("button")}</span>
               <ArrowRightIcon className="size-4" />
