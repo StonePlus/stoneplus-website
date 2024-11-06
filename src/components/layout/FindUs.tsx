@@ -6,7 +6,7 @@ const FindUs: React.FC = () => {
   return (
     <section>
       <iframe
-        src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_API_KEY}&q=place_id:ChIJbaI8fvpIxwcRPT1-qjYmKz8&zoom=17&maptype=satellite&language=${t("language")}`}
+        src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=place_id:ChIJbaI8fvpIxwcRPT1-qjYmKz8&zoom=17&maptype=satellite&language=${t("language")}`}
         className="h-80 w-full lg:h-96"
         style={{ border: 0 }}
         allowFullScreen
