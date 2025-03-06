@@ -7,15 +7,14 @@ import ArrowButton from "../ui/ArrowButton";
 
 // Helper function to handle title word splitting and margin on the last word
 const renderTitleWithSpacing = (title: string) => {
-  return title.split(" ").map((word, index, arr) =>
-    index === arr.length - 1 ? (
-      // Add right margin only on the last word
-      <span className="inline-block pr-24 sm:pr-32">{word}</span>
-    ) : (
-      // Ensure words are properly spaced
-      word + " "
-    ),
-  );
+  return title.split(" ").map((word, index, arr) => (
+    <span
+      key={index} // Add key prop with unique value (index in this case)
+      className={index === arr.length - 1 ? "inline-block pr-24 md:pr-32" : ""}
+    >
+      {word}{" "}
+    </span>
+  ));
 };
 
 export const Testimony = () => {
