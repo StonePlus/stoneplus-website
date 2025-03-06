@@ -117,7 +117,7 @@ export const Footer = () => {
         <small className="w-full grid-flow-col items-center justify-center border-t border-base-300 border-opacity-10 py-5 md:h-full md:justify-start md:border-b-0 md:px-14 md:py-4">
           <Brandmark className="grid size-5 fill-base-200 md:w-fit lg:hidden" />
           <span className="text-sm">
-            &copy; 2024 StonePlus - Concrete Design
+            &copy; {new Date().getFullYear()} StonePlus - Concrete Design
           </span>
         </small>
       </div>
