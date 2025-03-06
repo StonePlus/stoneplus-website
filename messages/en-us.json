@@ -42,6 +42,7 @@
     "tooltip": "No strings attached! 😉"
   },
   "Testimony": {
+    "badge": "Testimonials",
     "title": "What our clients are saying",
     "testimony-one": {
       "name": "Amarilio de Oliveira1",

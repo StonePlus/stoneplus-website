@@ -47,12 +47,15 @@ export const Testimony = () => {
 
   return (
     <section className="overflow-hidden">
-      <div className="mx-auto max-w-screen-xl px-4 py-16 md:px-14 md:py-24">
+      <div className="mx-auto max-w-screen-xl px-4 md:px-14 md:py-24">
+        <div className="badge mb-4 bg-[#FEDC00] p-3 text-sm font-bold uppercase text-neutral md:mb-8">
+          {t("badge")}
+        </div>
         <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
           {t("title")}
         </h1>
         <span>
-          <div className="divider divider-end mb-6 mt-2 font-medium text-primary sm:mb-14">
+          <div className="divider divider-end mb-6 mt-2 font-medium text-primary gap-1 sm:mb-14">
             <ArrowButton direction="left" onClick={prevSlide} />
             <ArrowButton direction="right" onClick={nextSlide} />
           </div>
@@ -67,7 +70,7 @@ export const Testimony = () => {
             {keys.map((key) => (
               <div
                 key={key}
-                className="w-full flex-shrink-0 p-4 md:w-1/2 lg:w-1/3"
+                className="w-full flex-shrink-0 pr-8 md:w-1/2 lg:w-1/3"
               >
                 <div className="chat chat-start">
                   <div className="chat-bubble max-w-xs bg-base-100 p-6 text-base-content shadow-xl">

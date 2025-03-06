@@ -9,7 +9,10 @@ interface ArrowButtonProps {
 
 const ArrowButton: React.FC<ArrowButtonProps> = ({ direction, onClick }) => {
   return (
-    <button className="btn btn-circle btn-secondary" onClick={onClick}>
+    <button
+      className="btn btn-circle btn-secondary btn-sm lg:btn-md"
+      onClick={onClick}
+    >
       {direction === "left" ? (
         <ArrowLeftIcon className="size-4" />
       ) : (
