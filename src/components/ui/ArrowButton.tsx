@@ -18,7 +18,7 @@ const ArrowButton: React.FC<ArrowButtonProps> = ({
     <Link
       href={href ?? ""}
       onClick={onClick}
-      className="btn btn-circle btn-secondary btn-sm sm:btn-md"
+      className="btn btn-circle btn-secondary btn-md"
       aria-label={direction === "left" ? "Slide anterior" : "Próximo slide"}
     >
       {direction === "left" ? (
