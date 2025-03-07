@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import ArrowButton from "../ui/ArrowButton";
+import TestimonyCard from "../ui/TestimonyCard";
 
 // Helper function to handle title word splitting and margin on the last word
 const renderTitleWithSpacing = (title: string) => {
   return title.split(" ").map((word, index, arr) => (
     <span
-      key={index} // Add key prop with unique value (index in this case)
+      key={index}
       className={index === arr.length - 1 ? "inline-block pr-24 md:pr-32" : ""}
     >
       {word}{" "}
@@ -19,6 +20,7 @@ const renderTitleWithSpacing = (title: string) => {
 
 export const Testimony = () => {
   const t = useTranslations("Testimony");
+
   const keys = [
     "testimony-one",
     "testimony-two",
@@ -28,19 +30,17 @@ export const Testimony = () => {
     "testimony-six",
   ] as const;
 
-  // State to track current slide index and items per page
-  const [index, setIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(1);
+  const [currentSliderIndex, setCurrentSliderIndex] = useState(1);
 
-  // Effect hook to adjust items per page based on window width
   useEffect(() => {
     const updateItemsPerPage = () => {
       if (window.innerWidth < 640) {
-        setItemsPerPage(1); // Mobile
+        setItemsPerPage(1);
       } else if (window.innerWidth < 1024) {
-        setItemsPerPage(2); // Tablet
+        setItemsPerPage(2);
       } else {
-        setItemsPerPage(3); // Desktop
+        setItemsPerPage(3);
       }
     };
 
@@ -49,18 +49,19 @@ export const Testimony = () => {
     return () => window.removeEventListener("resize", updateItemsPerPage);
   }, []);
 
-  // Calculate the maximum index based on number of items per page
-  const maxIndex = Math.ceil(keys.length / itemsPerPage) - 1;
+  // Divide keys into groups of size itemsPerPage
+  const groupedKeys = [];
+  for (let i = 0; i < keys.length; i += itemsPerPage) {
+    groupedKeys.push(keys.slice(i, i + itemsPerPage));
+  }
 
-  // Function to move to the next slide
-  const nextSlide = () => {
-    setIndex((prev) => (prev < maxIndex ? prev + 1 : 0));
-  };
+  const totalSlides = groupedKeys.length;
 
-  // Function to move to the previous slide
-  const prevSlide = () => {
-    setIndex((prev) => (prev > 0 ? prev - 1 : maxIndex));
-  };
+  // Ajustando os índices para um loop infinito
+  const prevSlide =
+    currentSliderIndex === 1 ? totalSlides : currentSliderIndex - 1;
+  const nextSlide =
+    currentSliderIndex === totalSlides ? 1 : currentSliderIndex + 1;
 
   return (
     <section>
@@ -79,44 +80,37 @@ export const Testimony = () => {
 
             {/* Arrow Buttons for the carousel */}
             <div className="divider divider-end mb-6 mt-0 gap-1 font-medium text-primary sm:mb-12">
-              <ArrowButton direction="left" onClick={prevSlide} />
-              <ArrowButton direction="right" onClick={nextSlide} />
+              <ArrowButton
+                direction="left"
+                href={`#slide${prevSlide}`}
+                onClick={() => setCurrentSliderIndex(prevSlide)}
+              />
+              <ArrowButton
+                direction="right"
+                href={`#slide${nextSlide}`}
+                onClick={() => setCurrentSliderIndex(nextSlide)}
+              />
             </div>
 
             {/* Carousel */}
-            <div className="mx-4 mb-2 overflow-hidden">
-              <div
-                className="flex transition-transform duration-300 ease-in-out"
-                style={{ transform: `translateX(-${index * 100}%)` }}
-              >
-                {keys.map((key) => (
-                  <div
-                    key={key}
-                    className="w-full flex-shrink-0 items-center justify-center pr-8 md:w-1/2 lg:w-1/3"
-                  >
-                    <div className="flex flex-col items-center justify-center">
-                      <div className="chat chat-start">
-                        <div className="chat-bubble max-w-xs bg-base-300 bg-opacity-25 p-6 text-base-content shadow-xl">
-                          {t(`${key}.feedback`)}
-                        </div>
-                      </div>
-                      <span className="mt-4 inline-flex items-center justify-start gap-4">
-                        <div className="avatar">
-                          <div className="size-12 rounded-full">
-                            <img alt="Foto" src={t(`${key}.photo`)} />
-                          </div>
-                        </div>
-                        <div className="flex flex-col">
-                          <p className="font-bold">{t(`${key}.name`)}</p>
-                          <small className="font-light">
-                            {t(`${key}.description`)}
-                          </small>
-                        </div>
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="carousel w-full">
+              {groupedKeys.map((group, groupIndex) => (
+                <div
+                  key={groupIndex}
+                  id={`slide${groupIndex + 1}`}
+                  className={`carousel-item grid w-full grid-cols-${itemsPerPage} scroll-mt-[50vh] grid-flow-col justify-center gap-4`}
+                >
+                  {group.map((key, index) => (
+                    <TestimonyCard
+                      key={index}
+                      testimony={t(`${key}.feedback`)}
+                      avatar={t(`${key}.photo`)}
+                      name={t(`${key}.name`)}
+                      role={t(`${key}.description`)}
+                    />
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>
