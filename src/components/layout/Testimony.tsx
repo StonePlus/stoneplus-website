@@ -63,57 +63,61 @@ export const Testimony = () => {
   };
 
   return (
-    <section className="overflow-hidden">
-      <div className="mx-auto max-w-screen-xl px-4 md:px-14 md:py-24">
-        {/* Badge */}
-        <div className="badge mb-4 bg-[#FEDC00] p-3 text-sm font-bold uppercase text-neutral md:mb-8">
-          {t("badge")}
-        </div>
+    <section>
+      <div className="mx-auto max-w-screen-xl px-4 py-16 md:px-14 md:py-24">
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            {/* Badge */}
+            <div className="badge mb-4 bg-[#FEDC00] p-3 text-sm font-bold uppercase text-neutral">
+              {t("badge")}
+            </div>
 
-        {/* Title with dynamic spacing on the last word */}
-        <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-          {renderTitleWithSpacing(t("title"))}
-        </h1>
+            {/* Title with dynamic spacing on the last word */}
+            <h3 className="text-2xl font-bold sm:text-3xl md:text-4xl">
+              {renderTitleWithSpacing(t("title"))}
+            </h3>
 
-        {/* Arrow Buttons for the carousel */}
-        <div className="divider divider-end mb-6 mt-2 gap-1 font-medium text-primary sm:mb-14 lg:mb-14">
-          <ArrowButton direction="left" onClick={prevSlide} />
-          <ArrowButton direction="right" onClick={nextSlide} />
-        </div>
+            {/* Arrow Buttons for the carousel */}
+            <div className="divider divider-end mb-6 mt-0 gap-1 font-medium text-primary sm:mb-12">
+              <ArrowButton direction="left" onClick={prevSlide} />
+              <ArrowButton direction="right" onClick={nextSlide} />
+            </div>
 
-        {/* Carousel */}
-        <div className="relative overflow-hidden">
-          <div
-            className="flex transition-transform duration-300 ease-in-out"
-            style={{ transform: `translateX(-${index * 100}%)` }}
-          >
-            {keys.map((key) => (
+            {/* Carousel */}
+            <div className="mx-4 mb-2 overflow-hidden">
               <div
-                key={key}
-                className="w-full flex-shrink-0 items-center justify-center pr-8 md:w-1/2 lg:w-1/3"
+                className="flex transition-transform duration-300 ease-in-out"
+                style={{ transform: `translateX(-${index * 100}%)` }}
               >
-                <div className="flex flex-col items-center justify-center">
-                  <div className="chat chat-start">
-                    <div className="chat-bubble max-w-xs bg-base-100 p-6 text-base-content shadow-xl">
-                      {t(`${key}.feedback`)}
+                {keys.map((key) => (
+                  <div
+                    key={key}
+                    className="w-full flex-shrink-0 items-center justify-center pr-8 md:w-1/2 lg:w-1/3"
+                  >
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="chat chat-start">
+                        <div className="chat-bubble max-w-xs bg-base-300 bg-opacity-25 p-6 text-base-content shadow-xl">
+                          {t(`${key}.feedback`)}
+                        </div>
+                      </div>
+                      <span className="mt-4 inline-flex items-center justify-start gap-4">
+                        <div className="avatar">
+                          <div className="size-12 rounded-full">
+                            <img alt="Foto" src={t(`${key}.photo`)} />
+                          </div>
+                        </div>
+                        <div className="flex flex-col">
+                          <p className="font-bold">{t(`${key}.name`)}</p>
+                          <small className="font-light">
+                            {t(`${key}.description`)}
+                          </small>
+                        </div>
+                      </span>
                     </div>
                   </div>
-                  <span className="mt-4 inline-flex items-center justify-start gap-4">
-                    <div className="avatar">
-                      <div className="size-12 rounded-full">
-                        <img alt="Foto" src={t(`${key}.photo`)} />
-                      </div>
-                    </div>
-                    <div className="flex flex-col">
-                      <p className="font-bold">{t(`${key}.name`)}</p>
-                      <small className="font-light">
-                        {t(`${key}.description`)}
-                      </small>
-                    </div>
-                  </span>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const Faq: React.FC = () => {
   ] as const;
 
   return (
-    <section>
+    <section className="relative">
       <div className="mx-auto flex max-w-screen-xl flex-col px-4 py-16 md:px-14 md:py-24">
         <div className="badge mb-4 bg-[#FEDC00] p-3 text-sm font-bold uppercase text-neutral md:mb-8">
           {t("badge")}
@@ -21,7 +21,7 @@ const Faq: React.FC = () => {
         <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
           {t("title")}
         </h1>
-        <div className="divider divider-start mb-6 mt-2 text-primary sm:mb-14" />
+        <div className="divider divider-secondary mb-6 mt-2 border-primary text-primary sm:mb-14" />
         <ul className="flex flex-col items-center gap-3">
           {keys.map((key) => (
             <li

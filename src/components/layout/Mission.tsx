@@ -5,7 +5,7 @@ export const Mission = () => {
 
   return (
     <section>
-      <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-16 px-4 py-16 md:gap-12 md:px-14 md:py-24 lg:gap-24">
+      <div className="relative mx-auto flex w-full max-w-screen-xl flex-col gap-16 px-4 py-16 md:gap-12 md:px-14 md:py-24 lg:gap-24">
         <div className="flex flex-col">
           <div className="badge badge-accent mb-4 p-3 text-sm font-bold uppercase md:mb-8">
             {t("badge")}
