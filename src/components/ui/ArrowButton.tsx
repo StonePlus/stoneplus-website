@@ -5,8 +5,8 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 interface ArrowButtonProps {
   direction: "left" | "right";
-  href: string;
-  onClick?: () => void;
+  href?: string;
+  onClick?: (event: React.MouseEvent) => void;
 }
 
 const ArrowButton: React.FC<ArrowButtonProps> = ({
@@ -16,7 +16,7 @@ const ArrowButton: React.FC<ArrowButtonProps> = ({
 }) => {
   return (
     <Link
-      href={href}
+      href={href ?? ""}
       onClick={onClick}
       className="btn btn-circle btn-secondary btn-sm sm:btn-md"
       aria-label={direction === "left" ? "Slide anterior" : "Próximo slide"}

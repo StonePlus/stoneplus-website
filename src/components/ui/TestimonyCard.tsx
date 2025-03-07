@@ -17,7 +17,7 @@ const TestimonyCard: React.FC<TestimonyCardProps> = ({
     <div className="flex flex-col items-center justify-center">
       {/* Chat Bubble */}
       <div className="chat chat-start">
-        <div className="chat-bubble max-w-xs bg-base-300 bg-opacity-25 p-6 text-base-content shadow-xl">
+        <div className="chat-bubble max-w-xs bg-base-300 bg-opacity-25 p-6 text-base-content">
           {testimony}
         </div>
       </div>

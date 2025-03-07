@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import ArrowButton from "../ui/ArrowButton";
 import TestimonyCard from "../ui/TestimonyCard";
 
-// Helper function to handle title word splitting and margin on the last word
 const renderTitleWithSpacing = (title: string) => {
   return title.split(" ").map((word, index, arr) => (
     <span
@@ -31,7 +30,7 @@ export const Testimony = () => {
   ] as const;
 
   const [itemsPerPage, setItemsPerPage] = useState(1);
-  const [currentSliderIndex, setCurrentSliderIndex] = useState(1);
+  const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
 
   useEffect(() => {
     const updateItemsPerPage = () => {
@@ -49,7 +48,6 @@ export const Testimony = () => {
     return () => window.removeEventListener("resize", updateItemsPerPage);
   }, []);
 
-  // Divide keys into groups of size itemsPerPage
   const groupedKeys = [];
   for (let i = 0; i < keys.length; i += itemsPerPage) {
     groupedKeys.push(keys.slice(i, i + itemsPerPage));
@@ -57,60 +55,63 @@ export const Testimony = () => {
 
   const totalSlides = groupedKeys.length;
 
-  // Ajustando os índices para um loop infinito
   const prevSlide =
-    currentSliderIndex === 1 ? totalSlides : currentSliderIndex - 1;
+    currentSliderIndex === 0 ? totalSlides - 1 : currentSliderIndex - 1;
   const nextSlide =
-    currentSliderIndex === totalSlides ? 1 : currentSliderIndex + 1;
+    currentSliderIndex === totalSlides - 1 ? 0 : currentSliderIndex + 1;
+
+  const handlePrevClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    setCurrentSliderIndex(prevSlide);
+  };
+
+  const handleNextClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    setCurrentSliderIndex(nextSlide);
+  };
 
   return (
     <section>
       <div className="mx-auto max-w-screen-xl px-4 py-16 md:px-14 md:py-24">
         <div className="card bg-base-100 shadow-xl">
           <div className="card-body">
-            {/* Badge */}
             <div className="badge mb-4 bg-[#FEDC00] p-3 text-sm font-bold uppercase text-neutral">
               {t("badge")}
             </div>
 
-            {/* Title with dynamic spacing on the last word */}
             <h3 className="text-2xl font-bold sm:text-3xl md:text-4xl">
               {renderTitleWithSpacing(t("title"))}
             </h3>
 
-            {/* Arrow Buttons for the carousel */}
             <div className="divider divider-end mb-6 mt-0 gap-1 font-medium text-primary sm:mb-12">
-              <ArrowButton
-                direction="left"
-                href={`#slide${prevSlide}`}
-                onClick={() => setCurrentSliderIndex(prevSlide)}
-              />
-              <ArrowButton
-                direction="right"
-                href={`#slide${nextSlide}`}
-                onClick={() => setCurrentSliderIndex(nextSlide)}
-              />
+              <ArrowButton direction="left" onClick={handlePrevClick} />
+              <ArrowButton direction="right" onClick={handleNextClick} />
             </div>
 
-            {/* Carousel */}
-            <div className="carousel w-full">
-              {groupedKeys.map((group, groupIndex) => (
-                <div
-                  key={groupIndex}
-                  id={`slide${groupIndex + 1}`}
-                  className={`carousel-item grid w-full grid-cols-${itemsPerPage} scroll-mt-[50vh] grid-flow-col justify-center gap-4`}
-                >
-                  {group.map((key, index) => (
-                    <TestimonyCard
-                      key={index}
-                      testimony={t(`${key}.feedback`)}
-                      avatar={t(`${key}.photo`)}
-                      name={t(`${key}.name`)}
-                      role={t(`${key}.description`)}
-                    />
-                  ))}
-                </div>
-              ))}
+            <div className="relative overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${currentSliderIndex * 100}%)`,
+                }}
+              >
+                {groupedKeys.map((group, groupIndex) => (
+                  <div
+                    key={groupIndex}
+                    className="flex min-w-full justify-center gap-4"
+                  >
+                    {group.map((key, index) => (
+                      <TestimonyCard
+                        key={index}
+                        testimony={t(`${key}.feedback`)}
+                        avatar={t(`${key}.photo`)}
+                        name={t(`${key}.name`)}
+                        role={t(`${key}.description`)}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
