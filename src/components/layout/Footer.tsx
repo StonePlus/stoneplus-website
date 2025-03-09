@@ -20,7 +20,7 @@ type LinkData = {
   icon: IconName;
 };
 
-export const Footer = () => {
+export default function Footer() {
   const t = useTranslations("Footer");
 
   const linksData: LinkData[] = [
@@ -123,4 +123,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}

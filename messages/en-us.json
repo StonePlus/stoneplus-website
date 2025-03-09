@@ -3,6 +3,12 @@
     "title": "StonePlus - Concrete Design",
     "description": "A company specializing in Cement Products, Pool Edges, Coatings, and Natural Stones."
   },
+  "NotFound": {
+    "errorCode": "404",
+    "errorMessage": "Not Found",
+    "description": "Oops! The page <guidelines>{currentUrl}</guidelines> does not exist. Check the URL or go back to the homepage.",
+    "buttonLabel": "Go to homepage"
+  },
   "Header": {
     "home-link": "/en-us",
     "about-us": "History",

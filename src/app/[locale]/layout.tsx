@@ -1,25 +1,19 @@
 import "./globals.css";
-
-import { IntlProps } from "@/types/intl";
-
-import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
+import { IntlProps } from "@/types/intl";
 import { NextIntlClientProvider } from "next-intl";
-import {
-  unstable_setRequestLocale,
-  getMessages,
-  getTranslations,
-} from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
-export async function generateMetadata({ params: { locale } }: IntlProps) {
-  unstable_setRequestLocale(locale);
+export async function generateMetadata({ params }: IntlProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "MetaDate" });
 
   return {
@@ -68,12 +62,20 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: IntlProps["params"];
+  params: Promise<{ locale: string }>;
 }) {
-  unstable_setRequestLocale(locale);
+  const { locale } = await params;
+
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (

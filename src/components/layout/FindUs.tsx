@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-const FindUs: React.FC = () => {
+export default function FindUs() {
   const t = useTranslations("FindUs");
 
   return (
@@ -15,6 +15,4 @@ const FindUs: React.FC = () => {
       ></iframe>
     </section>
   );
-};
-
-export default FindUs;
+}

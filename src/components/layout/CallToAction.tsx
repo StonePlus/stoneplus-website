@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-export const CallToAction = () => {
+export default function CallToAction() {
   const t = useTranslations("CallToAction");
 
   return (
@@ -38,4 +38,4 @@ export const CallToAction = () => {
       </div>
     </section>
   );
-};
+}

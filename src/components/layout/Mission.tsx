@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-export const Mission = () => {
+export default function Mission() {
   const t = useTranslations("Mission");
 
   return (
@@ -54,4 +54,4 @@ export const Mission = () => {
       </div>
     </section>
   );
-};
+}

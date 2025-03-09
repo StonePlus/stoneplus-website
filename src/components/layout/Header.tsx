@@ -11,7 +11,7 @@ import { Bars3BottomRightIcon } from "@heroicons/react/24/outline";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import Brandmark from "@svg/Brandmark";
 
-export const Header = () => {
+export default function Header() {
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
   }
@@ -108,4 +108,4 @@ export const Header = () => {
       </div>
     </header>
   );
-};
+}

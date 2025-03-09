@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-const Faq: React.FC = () => {
+export default function Faq() {
   const t = useTranslations("Faq");
   const keys = [
     "requestQuote",
@@ -47,6 +47,4 @@ const Faq: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Faq;
+}

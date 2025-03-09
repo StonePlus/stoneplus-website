@@ -6,7 +6,7 @@ import LeroyMerlinLogo from "@img/partner-logos/leroy-merlin.png";
 import CarajasLogo from "@img/partner-logos/carajas.png";
 import MetalLogo from "@img/partner-logos/metal-comercio.png";
 
-export const Partners = () => {
+export default function Partners() {
   return (
     <section className="bg-gradient-to-b from-black via-25% to-neutral">
       <div className="px-4 py-12 md:px-14 md:py-16">
@@ -89,4 +89,4 @@ export const Partners = () => {
       </div>
     </section>
   );
-};
+}

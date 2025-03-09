@@ -3,6 +3,12 @@
     "title": "StonePlus - Concrete Design",
     "description": "Indústria especializada em Cimentícios, Bordas de Piscina, Revestimentos e Pedras Naturais."
   },
+  "NotFound": {
+    "errorCode": "404",
+    "errorMessage": "Não Encontrado",
+    "description": "Oops! A página <guidelines>{currentUrl}</guidelines> não existe. Verifique a URL ou volte para a página inicial.",
+    "buttonLabel": "Ir para a página inicial"
+  },
   "Header": {
     "home-link": "/pt-br",
     "about-us": "História",

@@ -1,14 +1,14 @@
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 
-export const Hero = () => {
+export default function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section className="hero min-h-dvh bg-hero bg-left-top">
-      <div className="h-full w-full bg-gradient-to-t from-black via-black/40 via-50% to-transparent md:via-25%" />
+    <section className="hero min-h-dvh bg-hero">
+      <div className="hero-overlay h-full w-full bg-gradient-to-t from-black via-black/40 via-50% to-transparent md:via-25%" />
       <div className="flex h-full w-full max-w-screen-2xl items-end justify-between px-4 py-8 text-left text-neutral-content md:px-14 md:py-16">
         <div className="flex flex-1 flex-col">
           <div className="inline-flex w-full items-center justify-between">
@@ -34,4 +34,4 @@ export const Hero = () => {
       </div>
     </section>
   );
-};
+}

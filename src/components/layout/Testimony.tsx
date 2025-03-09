@@ -17,7 +17,7 @@ const renderTitleWithSpacing = (title: string) => {
   ));
 };
 
-export const Testimony = () => {
+export default function Testimony() {
   const t = useTranslations("Testimony");
 
   const keys = [
@@ -118,4 +118,4 @@ export const Testimony = () => {
       </div>
     </section>
   );
-};
+}
