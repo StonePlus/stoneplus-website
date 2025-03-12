@@ -25,7 +25,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        hero: "url('../../public/images/bg-hero.jpg')",
+        hero: "url('../../../public/images/bg-hero.jpg')",
       },
     },
     patterns: {
@@ -79,5 +79,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui", "tailwindcss-bg-patterns")],
 };

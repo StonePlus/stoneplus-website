@@ -1,3 +1,4 @@
+import "./globals.css";
 import { Open_Sans } from "next/font/google";
 
 import { IntlProps } from "@/types/intl";
