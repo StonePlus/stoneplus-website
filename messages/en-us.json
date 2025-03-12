@@ -53,37 +53,37 @@
     "testimony-one": {
       "name": "Amarilio de Oliveira1",
       "description": "Funcionário - Desenvolvedor Fullstack",
-      "photo": "mocked-avatar.jpg",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
       "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
     },
     "testimony-two": {
       "name": "Amarilio de Oliveira2",
       "description": "Funcionário - Desenvolvedor Fullstack",
-      "photo": "mocked-avatar.jpg",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
       "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
     },
     "testimony-three": {
       "name": "Amarilio de Oliveira3",
       "description": "Funcionário - Desenvolvedor Fullstack",
-      "photo": "mocked-avatar.jpg",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
       "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
     },
     "testimony-four": {
       "name": "Amarilio de Oliveira4",
       "description": "Funcionário - Desenvolvedor Fullstack",
-      "photo": "mocked-avatar.jpg",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
       "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
     },
     "testimony-five": {
       "name": "Amarilio de Oliveira5",
       "description": "Funcionário - Desenvolvedor Fullstack",
-      "photo": "mocked-avatar.jpg",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
       "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
     },
     "testimony-six": {
       "name": "Amarilio de Oliveira6",
       "description": "Funcionário - Desenvolvedor Fullstack",
-      "photo": "mocked-avatar.jpg",
+      "photo": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
       "feedback": "Foi você quem traria equilíbrio à Força Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit? Fugiat iste necessitatibus eos reiciendis molestiae vitae quo vel."
     }
   },

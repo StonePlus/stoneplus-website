@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 interface TestimonyCardProps {
   testimony: string;
@@ -28,12 +27,7 @@ const TestimonyCard: React.FC<TestimonyCardProps> = ({
         {/* Avatar */}
         <div className="avatar">
           <div className="size-12 rounded-full">
-            <Image
-              alt={`Photo of ${name}`}
-              src={avatar}
-              width={48}
-              height={48}
-            />
+            <img alt="Foto" src={avatar} />
           </div>
         </div>
 

@@ -12,13 +12,19 @@ import { useScrollPosition } from "@/hooks/useScrollPosition";
 import Brandmark from "@svg/Brandmark";
 
 export default function Header() {
+  function classNames(...classes: any) {
+    return classes.filter(Boolean).join(" ");
+  }
   const scrollPosition = useScrollPosition();
   const t = useTranslations("Header");
 
   return (
     <header
       data-theme="stoneplus"
-      className={`${scrollPosition > 0 ? "bg-neutral" : "bg-transparent"} fixed z-50 w-full text-neutral-content duration-200 ease-in-out hover:bg-neutral`}
+      className={classNames(
+        scrollPosition > 0 ? "bg-neutral" : "bg-transparent",
+        "fixed z-50 w-full text-neutral-content duration-200 ease-in-out hover:bg-neutral",
+      )}
     >
       <div className="navbar mx-auto max-w-screen-2xl px-4 md:px-14">
         <div className="navbar-start">

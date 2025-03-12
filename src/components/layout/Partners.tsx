@@ -21,6 +21,8 @@ export default function Partners() {
               className="max-h-12 w-full object-contain"
               src={AcalLogo}
               alt="Acal Home Center"
+              width={158}
+              height={48}
             />
           </Link>
 
@@ -34,6 +36,8 @@ export default function Partners() {
               className="max-h-12 w-full object-contain"
               src={LeroyMerlinLogo}
               alt="Leroy Merlin"
+              width={158}
+              height={48}
             />
           </Link>
 
@@ -47,6 +51,8 @@ export default function Partners() {
               className="max-h-12 w-full object-contain"
               src={CarajasLogo}
               alt="Carajás"
+              width={158}
+              height={48}
             />
           </Link>
 
@@ -60,6 +66,8 @@ export default function Partners() {
               className="max-h-12 w-full object-contain"
               src={MetalLogo}
               alt="Metal Comércio"
+              width={158}
+              height={48}
             />
           </Link>
 
@@ -73,6 +81,8 @@ export default function Partners() {
               className="max-h-12 w-full object-contain"
               src={MetalLogo}
               alt="Metal Comércio"
+              width={158}
+              height={48}
             />
           </Link>
         </div>
