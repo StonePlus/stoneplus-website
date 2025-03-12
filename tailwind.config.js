@@ -79,5 +79,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require("daisyui", "tailwindcss-bg-patterns")],
+  plugins: [require("daisyui")],
 };
