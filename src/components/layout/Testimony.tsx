@@ -104,7 +104,7 @@ export default function Testimony() {
                       <TestimonyCard
                         key={index}
                         testimony={t(`${key}.feedback`)}
-                        avatar={t(`${key}.photo`)}
+                        avatar={`/images/testimonies/${t(`${key}.photo`)}`}
                         name={t(`${key}.name`)}
                         role={t(`${key}.description`)}
                       />

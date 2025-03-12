@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useTransition } from 'react';
-import { usePathname, useRouter } from '@/i18n/routing';
-import Image from 'next/image';
-import EnFlag from '@img/icons/flags/en.png';
-import PtBrFlag from '@img/icons/flags/pt-br.png';
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { useLocale } from 'next-intl';
+import { useTransition } from "react";
+import { usePathname, useRouter } from "@/i18n/routing";
+import Image from "next/image";
+import EnFlag from "@img/icons/flags/en.png";
+import PtBrFlag from "@img/icons/flags/pt-br.png";
+import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import { useLocale } from "next-intl";
 
 export const LanguageSwitcher = () => {
   const router = useRouter();
@@ -14,7 +14,7 @@ export const LanguageSwitcher = () => {
   const locale = useLocale();
   const [isPending, startTransition] = useTransition();
 
-  function handleLocaleChange(newLocale: any) {
+  function handleLocaleChange(newLocale: string) {
     startTransition(() => {
       router.replace(pathname, { locale: newLocale });
     });
@@ -34,7 +34,7 @@ export const LanguageSwitcher = () => {
         <ul className="mt-2 w-full rounded-box bg-neutral bg-opacity-70 p-2 shadow">
           <li>
             <button
-              onClick={() => handleLocaleChange('pt-br')}
+              onClick={() => handleLocaleChange("pt-br")}
               disabled={isPending}
               className="flex items-center gap-2 hover:bg-neutral hover:text-secondary"
             >
@@ -44,7 +44,7 @@ export const LanguageSwitcher = () => {
           </li>
           <li>
             <button
-              onClick={() => handleLocaleChange('en-us')}
+              onClick={() => handleLocaleChange("en-us")}
               disabled={isPending}
               className="flex items-center gap-2 hover:bg-neutral hover:text-secondary"
             >
